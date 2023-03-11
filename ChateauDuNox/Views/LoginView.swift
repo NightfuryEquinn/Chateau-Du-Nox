@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct LoginView: View {
+    let cBlack = Color(red: 0.14, green: 0.17, blue: 0.20)
+    let cYellow = Color(red: 238.0/255.0, green: 235.0/255.0, blue: 209.0/255.0)
+    
+    @State private var username = ""
+    @State private var password = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            cYellow.ignoresSafeArea()
+            
+            VStack {
+                Image("pinot-noir-cover")
+                    .resizable()
+                    .scaledToFit()
+                    .edgesIgnoringSafeArea(.all)
+                    .padding(.bottom, 40)
+                
+                
+                Text("Chateau Du Nox")
+                    .font(Font.custom("Vollkorn-Regular", size: 24))
+                    .foregroundColor(cBlack)
+                    .padding(.bottom, 40)
+            }
+            .background(cYellow)
+        }
     }
 }
 
