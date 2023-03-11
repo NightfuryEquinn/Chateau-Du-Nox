@@ -18,6 +18,8 @@
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
 		64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */; };
 		64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */; };
+		64C9AB9C29BC693A00025C95 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9AB9B29BC693A00025C95 /* MainMenuView.swift */; };
+		64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */; };
 		64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F634E729BC43AE006E03D8 /* ForgotView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
 		64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riesling-cover.jpeg"; sourceTree = "<group>"; };
 		64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-cover.jpeg"; sourceTree = "<group>"; };
+		64C9AB9B29BC693A00025C95 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		64D7664529BC404500E63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64F634E729BC43AE006E03D8 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +80,7 @@
 				647EF5CA29BC2250002A9897 /* Views */,
 				647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */,
 				647EF5C429BC2045002A9897 /* PersistenceController.swift */,
+				64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */,
 			);
 			path = ChateauDuNox;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				647EF5C629BC2224002A9897 /* LoginView.swift */,
 				647EF5C829BC2247002A9897 /* SignupView.swift */,
 				64F634E729BC43AE006E03D8 /* ForgotView.swift */,
+				64C9AB9B29BC693A00025C95 /* MainMenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
+				64C9AB9C29BC693A00025C95 /* MainMenuView.swift in Sources */,
+				64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */,
 				647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */,
 				647EF5C329BC1F7C002A9897 /* ChateauDB.xcdatamodeld in Sources */,
 				647EF5D229BC349F002A9897 /* LoginView.swift in Sources */,

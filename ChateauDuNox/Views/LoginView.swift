@@ -18,8 +18,8 @@ struct LoginView: View {
     @State var showSignupView = false
     @State var showForgotView = false
     
-    @State private var username = ""
-    @State private var password = ""
+    @State private var inUsername = ""
+    @State private var inPassword = ""
     
     var body: some View {
         GeometryReader { geometry in
@@ -43,7 +43,7 @@ struct LoginView: View {
                         .font(.custom("Futura", size: 18))
                         .foregroundColor(cBlack)
                     
-                    TextField("Enter username", text: $username)
+                    TextField("Enter username", text: $inUsername)
                         .font(.custom("Futura", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
@@ -51,7 +51,7 @@ struct LoginView: View {
                         .font(.custom("Futura", size: 18))
                         .foregroundColor(cBlack)
                     
-                    SecureField("Enter password", text: $password)
+                    SecureField("Enter password", text: $inPassword)
                         .font(.custom("Futura", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
@@ -60,6 +60,8 @@ struct LoginView: View {
                 
                 Button(action: {
                     print("Login")
+                    
+                    print(userAuthentication(username: inUsername, password: inPassword))
                 }) {
                     Text("Login")
                         .font(.custom("Verdana", size: 20))

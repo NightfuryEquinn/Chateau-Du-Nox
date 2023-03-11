@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SignupView: View {
     // Custom Colors
@@ -14,12 +15,24 @@ struct SignupView: View {
     let cDarkGreen = Color(red: 68/255, green: 88/255, blue: 39/255)
     let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
     
+    // Database
+    @Environment(\.managedObjectContext) var viewContext
+    
+    @FetchRequest(entity: User.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)])
+    private var users: FetchedResults<User>
+    
+    // State Variables
     @State private var newUsername = ""
     @State private var newPassword = ""
     @State private var newEmail = ""
     @State private var newContact = ""
     @State private var newAddress = ""
     
+    // State Bool
+    @State private var usernameExists = false
+    @State private var emailExists = false
+    
+    // Binding Variables
     @Binding var showSignupView: Bool
     
     var body: some View {
@@ -90,7 +103,15 @@ struct SignupView: View {
                     .padding(.bottom, 60)
                     
                     Button(action: {
-                        print("Register")
+                        if checkUsernameExists() {
+                            print("Username exist")
+                        } else if checkEmailExists() {
+                            print("Email exist")
+                        } else {
+                            addUser()
+                            
+                            showSignupView = false
+                        }
                     }) {
                         Text("Register")
                             .font(.custom("Verdana", size: 20))
@@ -119,6 +140,56 @@ struct SignupView: View {
                     .padding(.bottom, 30)
                 }
             }
+        }
+    }
+    
+    // Save New User
+    private func addUser() {
+        let user = User(context: viewContext)
+        
+        user.name = newUsername
+        user.password = newPassword
+        user.email = newEmail
+        user.contact = newContact
+        user.address = newAddress
+        
+        do {
+            try viewContext.save()
+            
+            print("New User")
+        } catch {
+            let error = error as NSError
+            fatalError("An error occured: \(error)")
+        }
+    }
+    
+    // Check for existing username
+    private func checkUsernameExists() -> Bool {
+        let request = NSFetchRequest<User>(entityName: "User")
+        request.predicate = NSPredicate(format: "name == %@", newUsername)
+        request.fetchLimit = 1
+        
+        do {
+            let users = try viewContext.fetch(request)
+            return !users.isEmpty
+        } catch {
+            print("Error fetching users: \(error.localizedDescription)")
+            return false
+        }
+    }
+    
+    // Check for existing email address
+    private func checkEmailExists() -> Bool {
+        let request = NSFetchRequest<User>(entityName: "User")
+        request.predicate = NSPredicate(format: "email == %@", newEmail)
+        request.fetchLimit = 1
+        
+        do {
+            let users = try viewContext.fetch(request)
+            return !users.isEmpty
+        } catch {
+            print("Error fetching users: \(error.localizedDescription)")
+            return false
         }
     }
 }
