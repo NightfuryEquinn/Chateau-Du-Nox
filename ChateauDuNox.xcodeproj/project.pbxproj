@@ -16,7 +16,8 @@
 		647EF5C929BC2247002A9897 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C829BC2247002A9897 /* SignupView.swift */; };
 		647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */; };
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
-		64D7664429BC3FE300E63152 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5D329BC356C002A9897 /* Font */; };
+		64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */; };
+		64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */; };
 		64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F634E729BC43AE006E03D8 /* ForgotView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +31,8 @@
 		647EF5C629BC2224002A9897 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		647EF5C829BC2247002A9897 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
-		647EF5D329BC356C002A9897 /* Font */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Font; sourceTree = SOURCE_ROOT; };
+		64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riesling-cover.jpeg"; sourceTree = "<group>"; };
+		64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-cover.jpeg"; sourceTree = "<group>"; };
 		64D7664529BC404500E63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64F634E729BC43AE006E03D8 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +71,6 @@
 				64D7664529BC404500E63152 /* Info.plist */,
 				647EF5C129BC1F7C002A9897 /* ChateauDB.xcdatamodeld */,
 				647EF5AF29BC1D6D002A9897 /* Assets.xcassets */,
-				647EF5D329BC356C002A9897 /* Font */,
 				647EF5D129BC29D9002A9897 /* Images */,
 				647EF5B129BC1D6D002A9897 /* Preview Content */,
 				647EF5CA29BC2250002A9897 /* Views */,
@@ -100,6 +101,8 @@
 		647EF5D129BC29D9002A9897 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */,
+				64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */,
 				647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */,
 			);
 			path = Images;
@@ -169,8 +172,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64D7664429BC3FE300E63152 /* Font in Resources */,
+				64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */,
 				647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */,
+				64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */,
 				647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */,
 				647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */,
 			);

@@ -15,7 +15,8 @@ struct LoginView: View {
     let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
     
     // Boolean for View Switching
-    @State private var showSignupView = false
+    @State var showSignupView = false
+    @State var showForgotView = false
     
     @State private var username = ""
     @State private var password = ""
@@ -29,66 +30,72 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                     .edgesIgnoringSafeArea(.all)
-                    .padding(.bottom, 40)
-                
+                    .padding(.bottom, 20)
                 
                 Text("Chateau Du Nox")
-                    .font(.custom("Vollkorn-Regular", size: 40))
+                    .font(.custom("Verdana", size: 36))
+                    .bold()
                     .foregroundColor(cBlack)
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 60)
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Username")
-                        .font(.headline)
+                        .font(.custom("Futura", size: 18))
                         .foregroundColor(cBlack)
                     
                     TextField("Enter username", text: $username)
+                        .font(.custom("Futura", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                     Text("Password")
-                        .font(.headline)
+                        .font(.custom("Futura", size: 18))
                         .foregroundColor(cBlack)
                     
                     SecureField("Enter password", text: $password)
+                        .font(.custom("Futura", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 .padding(.horizontal, 40)
-                .padding(.bottom, 40)
+                .padding(.bottom, 60)
                 
                 Button(action: {
                     print("Login")
                 }) {
                     Text("Login")
-                        .font(.headline)
+                        .font(.custom("Verdana", size: 20))
+                        .bold()
                         .foregroundColor(cYellow)
-                        .padding(16)
+                        .padding(10)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .background(cDarkGreen)
                         .cornerRadius(50)
                 }
                 .padding(.horizontal, 120)
-                .padding(.bottom, 40)
+                .padding(.bottom, 60)
                 
                 HStack {
                     Button(action: {
                         self.showSignupView = true
                     }) {
                         Text("Register")
-                            .font(.subheadline)
+                            .font(.custom("Verdana", size: 14))
                             .foregroundColor(cBlack)
                     }
                     .sheet(isPresented: $showSignupView) {
-                        SignupView()
+                        SignupView(showSignupView: $showSignupView)
                     }
                     
                     Spacer()
                     
                     Button(action: {
-                        print("To Forgot Password")
+                        self.showForgotView = true
                     }) {
                         Text("Forgot Password")
-                            .font(.subheadline)
+                            .font(.custom("Verdana", size: 14))
                             .foregroundColor(cBlack)
+                    }
+                    .sheet(isPresented: $showForgotView) {
+                        ForgotView()
                     }
                 }
                 .padding(.horizontal, 80)
