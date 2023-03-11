@@ -16,7 +16,8 @@
 		647EF5C929BC2247002A9897 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C829BC2247002A9897 /* SignupView.swift */; };
 		647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */; };
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
-		647EF5D429BC356C002A9897 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5D329BC356C002A9897 /* Font */; };
+		64D7664429BC3FE300E63152 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5D329BC356C002A9897 /* Font */; };
+		64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F634E729BC43AE006E03D8 /* ForgotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		647EF5C829BC2247002A9897 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
 		647EF5D329BC356C002A9897 /* Font */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Font; sourceTree = SOURCE_ROOT; };
+		64D7664529BC404500E63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		64F634E729BC43AE006E03D8 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 		647EF5AA29BC1D6C002A9897 /* ChateauDuNox */ = {
 			isa = PBXGroup;
 			children = (
+				64D7664529BC404500E63152 /* Info.plist */,
 				647EF5C129BC1F7C002A9897 /* ChateauDB.xcdatamodeld */,
 				647EF5AF29BC1D6D002A9897 /* Assets.xcassets */,
 				647EF5D329BC356C002A9897 /* Font */,
@@ -88,6 +92,7 @@
 			children = (
 				647EF5C629BC2224002A9897 /* LoginView.swift */,
 				647EF5C829BC2247002A9897 /* SignupView.swift */,
+				64F634E729BC43AE006E03D8 /* ForgotView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647EF5D429BC356C002A9897 /* Font in Resources */,
+				64D7664429BC3FE300E63152 /* Font in Resources */,
 				647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */,
 				647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */,
 				647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */,
@@ -183,6 +188,7 @@
 				647EF5C329BC1F7C002A9897 /* ChateauDB.xcdatamodeld in Sources */,
 				647EF5D229BC349F002A9897 /* LoginView.swift in Sources */,
 				647EF5C929BC2247002A9897 /* SignupView.swift in Sources */,
+				64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +321,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ChateauDuNox/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChateauDuNox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,6 +350,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ChateauDuNox/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChateauDuNox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
