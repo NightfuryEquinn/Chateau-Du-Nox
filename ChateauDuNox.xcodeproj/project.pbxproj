@@ -8,21 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */; };
-		647EF5AE29BC1D6C002A9897 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5AD29BC1D6C002A9897 /* ContentView.swift */; };
 		647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5AF29BC1D6D002A9897 /* Assets.xcassets */; };
 		647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5B229BC1D6D002A9897 /* Preview Assets.xcassets */; };
-		647EF5B529BC1D6D002A9897 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5B429BC1D6D002A9897 /* Persistence.swift */; };
-		647EF5B829BC1D6D002A9897 /* ChateauDuNox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5B629BC1D6D002A9897 /* ChateauDuNox.xcdatamodeld */; };
+		647EF5C029BC1EB3002A9897 /* BottomBar-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 647EF5BF29BC1EB3002A9897 /* BottomBar-SwiftUI */; };
+		647EF5C329BC1F7C002A9897 /* ChateauDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C129BC1F7C002A9897 /* ChateauDB.xcdatamodeld */; };
+		647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C429BC2045002A9897 /* PersistenceController.swift */; };
+		647EF5C729BC2224002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
+		647EF5C929BC2247002A9897 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C829BC2247002A9897 /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		647EF5A829BC1D6C002A9897 /* ChateauDuNox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChateauDuNox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateauDuNoxApp.swift; sourceTree = "<group>"; };
-		647EF5AD29BC1D6C002A9897 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		647EF5AF29BC1D6D002A9897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		647EF5B229BC1D6D002A9897 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		647EF5B429BC1D6D002A9897 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		647EF5B729BC1D6D002A9897 /* ChateauDuNox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChateauDuNox.xcdatamodel; sourceTree = "<group>"; };
+		647EF5C229BC1F7C002A9897 /* ChateauDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChateauDB.xcdatamodel; sourceTree = "<group>"; };
+		647EF5C429BC2045002A9897 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		647EF5C629BC2224002A9897 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		647EF5C829BC2247002A9897 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647EF5C029BC1EB3002A9897 /* BottomBar-SwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,12 +59,12 @@
 		647EF5AA29BC1D6C002A9897 /* ChateauDuNox */ = {
 			isa = PBXGroup;
 			children = (
-				647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */,
-				647EF5AD29BC1D6C002A9897 /* ContentView.swift */,
 				647EF5AF29BC1D6D002A9897 /* Assets.xcassets */,
-				647EF5B429BC1D6D002A9897 /* Persistence.swift */,
-				647EF5B629BC1D6D002A9897 /* ChateauDuNox.xcdatamodeld */,
+				647EF5C129BC1F7C002A9897 /* ChateauDB.xcdatamodeld */,
 				647EF5B129BC1D6D002A9897 /* Preview Content */,
+				647EF5CA29BC2250002A9897 /* Views */,
+				647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */,
+				647EF5C429BC2045002A9897 /* PersistenceController.swift */,
 			);
 			path = ChateauDuNox;
 			sourceTree = "<group>";
@@ -71,6 +75,15 @@
 				647EF5B229BC1D6D002A9897 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		647EF5CA29BC2250002A9897 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				647EF5C629BC2224002A9897 /* LoginView.swift */,
+				647EF5C829BC2247002A9897 /* SignupView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +102,9 @@
 			dependencies = (
 			);
 			name = ChateauDuNox;
+			packageProductDependencies = (
+				647EF5BF29BC1EB3002A9897 /* BottomBar-SwiftUI */,
+			);
 			productName = ChateauDuNox;
 			productReference = 647EF5A829BC1D6C002A9897 /* ChateauDuNox.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 647EF59F29BC1D6C002A9897;
+			packageReferences = (
+				647EF5BE29BC1EB3002A9897 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */,
+			);
 			productRefGroup = 647EF5A929BC1D6C002A9897 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647EF5B529BC1D6D002A9897 /* Persistence.swift in Sources */,
-				647EF5AE29BC1D6C002A9897 /* ContentView.swift in Sources */,
-				647EF5B829BC1D6D002A9897 /* ChateauDuNox.xcdatamodeld in Sources */,
+				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
 				647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */,
+				647EF5C729BC2224002A9897 /* LoginView.swift in Sources */,
+				647EF5C329BC1F7C002A9897 /* ChateauDB.xcdatamodeld in Sources */,
+				647EF5C929BC2247002A9897 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,14 +368,33 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		647EF5BE29BC1EB3002A9897 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartvipere75/bottombar-swiftui";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		647EF5BF29BC1EB3002A9897 /* BottomBar-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 647EF5BE29BC1EB3002A9897 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */;
+			productName = "BottomBar-SwiftUI";
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
-		647EF5B629BC1D6D002A9897 /* ChateauDuNox.xcdatamodeld */ = {
+		647EF5C129BC1F7C002A9897 /* ChateauDB.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				647EF5B729BC1D6D002A9897 /* ChateauDuNox.xcdatamodel */,
+				647EF5C229BC1F7C002A9897 /* ChateauDB.xcdatamodel */,
 			);
-			currentVersion = 647EF5B729BC1D6D002A9897 /* ChateauDuNox.xcdatamodel */;
-			path = ChateauDuNox.xcdatamodeld;
+			currentVersion = 647EF5C229BC1F7C002A9897 /* ChateauDB.xcdatamodel */;
+			path = ChateauDB.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
