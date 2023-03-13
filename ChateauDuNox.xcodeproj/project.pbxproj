@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */; };
 		647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */; };
 		647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5AF29BC1D6D002A9897 /* Assets.xcassets */; };
 		647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5B229BC1D6D002A9897 /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotAuthentication.swift; sourceTree = "<group>"; };
 		647EF5A829BC1D6C002A9897 /* ChateauDuNox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChateauDuNox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateauDuNoxApp.swift; sourceTree = "<group>"; };
 		647EF5AF29BC1D6D002A9897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64652D4629BEBB0100D576C7 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */,
+				64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
 		647EF59F29BC1D6C002A9897 = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +88,10 @@
 				647EF5AF29BC1D6D002A9897 /* Assets.xcassets */,
 				647EF5D129BC29D9002A9897 /* Images */,
 				647EF5B129BC1D6D002A9897 /* Preview Content */,
+				64652D4629BEBB0100D576C7 /* Backend */,
 				647EF5CA29BC2250002A9897 /* Views */,
 				647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */,
 				647EF5C429BC2045002A9897 /* PersistenceController.swift */,
-				64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */,
 			);
 			path = ChateauDuNox;
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
 				64C9AB9C29BC693A00025C95 /* MainMenuView.swift in Sources */,
 				64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */,
+				64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */,
 				647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */,
 				647EF5C329BC1F7C002A9897 /* ChateauDB.xcdatamodeld in Sources */,
 				647EF5D229BC349F002A9897 /* LoginView.swift in Sources */,

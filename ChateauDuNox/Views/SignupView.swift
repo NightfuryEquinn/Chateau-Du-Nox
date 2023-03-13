@@ -124,7 +124,7 @@ struct SignupView: View {
                     }
                     .padding(.horizontal, 120)
                     .padding(.bottom, 30)
-                    
+                    .disabled(!self.canAuthenticate())
                     
                     Button(action: {
                         showSignupView = false
@@ -191,6 +191,11 @@ struct SignupView: View {
             print("Error fetching users: \(error.localizedDescription)")
             return false
         }
+    }
+    
+    // Enable and disable button
+    private func canAuthenticate() -> Bool {
+        !self.newUsername.isEmpty && !self.newPassword.isEmpty && !self.newEmail.isEmpty && !self.newContact.isEmpty && !self.newAddress.isEmpty
     }
 }
 

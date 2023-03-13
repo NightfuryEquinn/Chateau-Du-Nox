@@ -10,6 +10,7 @@ import CoreData
 func userAuthentication(username: String, password: String) -> Bool {
     // Get a Reference to the Core Data persistent container
     let container = NSPersistentContainer(name: "ChateauDB")
+    
     container.loadPersistentStores { (storeDescription, error ) in
         if let error = error as NSError? {
             fatalError("Unresolved error \(error), \(error.userInfo)")
