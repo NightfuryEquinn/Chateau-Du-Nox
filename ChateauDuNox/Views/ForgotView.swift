@@ -32,26 +32,26 @@ struct ForgotView: View {
                     .padding(.bottom, 20)
                 
                 Text("Forgot Password")
-                    .font(.custom("Verdana", size: 36))
+                    .font(.custom("Didot", size: 36))
                     .bold()
                     .foregroundColor(cBlack)
                     .padding(.bottom, 60)
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Email Address")
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Avenir Next", size: 18))
                         .foregroundColor(cBlack)
                     
                     TextField("Email Address", text: $inEmail)
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Avenir Next", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                     Text("New Password")
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Avenir Next", size: 18))
                         .foregroundColor(cBlack)
                     
                     SecureField("New Password", text: $inNewPassword)
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Avenir Next", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 .padding(.horizontal, 40)
@@ -71,7 +71,7 @@ struct ForgotView: View {
                     }
                 }) {
                     Text("Update")
-                        .font(.custom("Verdana", size: 20))
+                        .font(.custom("Didot", size: 20))
                         .bold()
                         .foregroundColor(cYellow)
                         .padding(10)
@@ -87,7 +87,7 @@ struct ForgotView: View {
                     print("Contact Service")
                 }) {
                     Text("Contact Service")
-                        .font(.custom("Verdana", size: 14))
+                        .font(.custom("Didot", size: 14))
                         .foregroundColor(cBlack)
                 }
                 .padding(.horizontal, 80)

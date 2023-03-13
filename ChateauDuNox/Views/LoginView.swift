@@ -25,7 +25,11 @@ struct LoginView: View {
     @State var showSignupView = false
     @State var showForgotView = false
     
+    @State var isLoginViewActive = false
+    @State var isGuestMenuViewActive = false
+    
     @State var isAuthenticated = false
+    @State var isLogin = false
     
     // State Variables
     @State private var inUsername = ""
@@ -48,26 +52,26 @@ struct LoginView: View {
                         .ignoresSafeArea()
                     
                     Text("Chateau Du Nox")
-                        .font(.custom("Verdana", size: 36))
+                        .font(.custom("Didot", size: 36))
                         .bold()
                         .foregroundColor(cBlack)
                         .padding(.bottom, 50)
                     
                     VStack(alignment: .leading, spacing: 20) {
                         Text("Username")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         TextField("Enter username", text: $inUsername)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         Text("Password")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         SecureField("Enter password", text: $inPassword)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     .padding(.horizontal, 40)
@@ -83,7 +87,7 @@ struct LoginView: View {
                         }
                     }) {
                         Text("Login")
-                            .font(.custom("Verdana", size: 20))
+                            .font(.custom("Didot", size: 20))
                             .bold()
                             .foregroundColor(cYellow)
                             .padding(10)
@@ -105,7 +109,7 @@ struct LoginView: View {
                             self.showSignupView = true
                         }) {
                             Text("Register")
-                                .font(.custom("Verdana", size: 14))
+                                .font(.custom("Didot", size: 14))
                                 .foregroundColor(cBlack)
                         }
                         .sheet(isPresented: $showSignupView) {
@@ -117,7 +121,7 @@ struct LoginView: View {
                             self.showForgotView = true
                         }) {
                             Text("Forgot Password")
-                                .font(.custom("Verdana", size: 14))
+                                .font(.custom("Didot", size: 14))
                                 .foregroundColor(cBlack)
                         }
                         .sheet(isPresented: $showForgotView) {
@@ -128,6 +132,21 @@ struct LoginView: View {
 
                     BottomBar(selectedIndex: self.$selectedIndex, items: bottomBarItems)
                         .padding(.horizontal, 60)
+                        .onChange(of: selectedIndex) { index in
+                            if index == 1 {
+                                self.isLoginViewActive = false
+                                self.isGuestMenuViewActive = true
+                                self.selectedIndex = 1
+                                
+                            } else {
+                                self.isLoginViewActive = true
+                                self.isGuestMenuViewActive = false
+                                self.selectedIndex = 0
+                            }
+                        }
+                        .background(
+                            NavigationLink(destination: GuestMenuView(isLoginViewActive: $isLoginViewActive, isGuestMenuViewActive: $isGuestMenuViewActive, selectedIndex: $selectedIndex), isActive: self.$isGuestMenuViewActive, label: { EmptyView() })
+                        )
                 }
                 .background(cYellow)
                 .navigationBarHidden(true)

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */; };
+		647805C929BEEE3E00018916 /* chateauLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 647805C829BEEE3E00018916 /* chateauLogo.png */; };
+		647805CB29BEF69500018916 /* pinot-noir-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 647805CA29BEF69500018916 /* pinot-noir-bottle.png */; };
+		647805CD29BF0EA800018916 /* GuestMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647805CC29BF0EA800018916 /* GuestMenuView.swift */; };
+		647805CF29BF0F8000018916 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647805CE29BF0F8000018916 /* MainMenuView.swift */; };
+		647805D129BF1C6D00018916 /* WineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647805D029BF1C6D00018916 /* WineData.swift */; };
+		647805D429BF1D4E00018916 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647805D329BF1D4E00018916 /* Wine.swift */; };
 		647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */; };
 		647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5AF29BC1D6D002A9897 /* Assets.xcassets */; };
 		647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5B229BC1D6D002A9897 /* Preview Assets.xcassets */; };
@@ -19,13 +25,18 @@
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
 		64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */; };
 		64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */; };
-		64C9AB9C29BC693A00025C95 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9AB9B29BC693A00025C95 /* MainMenuView.swift */; };
 		64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */; };
 		64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F634E729BC43AE006E03D8 /* ForgotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotAuthentication.swift; sourceTree = "<group>"; };
+		647805C829BEEE3E00018916 /* chateauLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chateauLogo.png; sourceTree = "<group>"; };
+		647805CA29BEF69500018916 /* pinot-noir-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinot-noir-bottle.png"; sourceTree = "<group>"; };
+		647805CC29BF0EA800018916 /* GuestMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestMenuView.swift; sourceTree = "<group>"; };
+		647805CE29BF0F8000018916 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		647805D029BF1C6D00018916 /* WineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineData.swift; sourceTree = "<group>"; };
+		647805D329BF1D4E00018916 /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		647EF5A829BC1D6C002A9897 /* ChateauDuNox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChateauDuNox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateauDuNoxApp.swift; sourceTree = "<group>"; };
 		647EF5AF29BC1D6D002A9897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,9 +48,7 @@
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
 		64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riesling-cover.jpeg"; sourceTree = "<group>"; };
 		64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-cover.jpeg"; sourceTree = "<group>"; };
-		64C9AB9B29BC693A00025C95 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
-		64D7664529BC404500E63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64F634E729BC43AE006E03D8 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +73,15 @@
 			path = Backend;
 			sourceTree = "<group>";
 		};
+		647805D229BF1C7200018916 /* Hardcode */ = {
+			isa = PBXGroup;
+			children = (
+				647805D329BF1D4E00018916 /* Wine.swift */,
+				647805D029BF1C6D00018916 /* WineData.swift */,
+			);
+			path = Hardcode;
+			sourceTree = "<group>";
+		};
 		647EF59F29BC1D6C002A9897 = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +101,11 @@
 		647EF5AA29BC1D6C002A9897 /* ChateauDuNox */ = {
 			isa = PBXGroup;
 			children = (
-				64D7664529BC404500E63152 /* Info.plist */,
 				647EF5C129BC1F7C002A9897 /* ChateauDB.xcdatamodeld */,
 				647EF5AF29BC1D6D002A9897 /* Assets.xcassets */,
 				647EF5D129BC29D9002A9897 /* Images */,
 				647EF5B129BC1D6D002A9897 /* Preview Content */,
+				647805D229BF1C7200018916 /* Hardcode */,
 				64652D4629BEBB0100D576C7 /* Backend */,
 				647EF5CA29BC2250002A9897 /* Views */,
 				647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */,
@@ -109,8 +127,9 @@
 			children = (
 				647EF5C629BC2224002A9897 /* LoginView.swift */,
 				647EF5C829BC2247002A9897 /* SignupView.swift */,
+				647805CC29BF0EA800018916 /* GuestMenuView.swift */,
+				647805CE29BF0F8000018916 /* MainMenuView.swift */,
 				64F634E729BC43AE006E03D8 /* ForgotView.swift */,
-				64C9AB9B29BC693A00025C95 /* MainMenuView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +137,8 @@
 		647EF5D129BC29D9002A9897 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				647805CA29BEF69500018916 /* pinot-noir-bottle.png */,
+				647805C829BEEE3E00018916 /* chateauLogo.png */,
 				64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */,
 				64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */,
 				647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */,
@@ -189,10 +210,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647805C929BEEE3E00018916 /* chateauLogo.png in Resources */,
 				64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */,
 				647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */,
 				64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */,
 				647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */,
+				647805CB29BEF69500018916 /* pinot-noir-bottle.png in Resources */,
 				647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,12 +227,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647805CF29BF0F8000018916 /* MainMenuView.swift in Sources */,
 				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
-				64C9AB9C29BC693A00025C95 /* MainMenuView.swift in Sources */,
+				647805CD29BF0EA800018916 /* GuestMenuView.swift in Sources */,
 				64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */,
 				64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */,
 				647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */,
+				647805D129BF1C6D00018916 /* WineData.swift in Sources */,
 				647EF5C329BC1F7C002A9897 /* ChateauDB.xcdatamodeld in Sources */,
+				647805D429BF1D4E00018916 /* Wine.swift in Sources */,
 				647EF5D229BC349F002A9897 /* LoginView.swift in Sources */,
 				647EF5C929BC2247002A9897 /* SignupView.swift in Sources */,
 				64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */,

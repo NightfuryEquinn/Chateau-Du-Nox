@@ -48,7 +48,7 @@ struct SignupView: View {
                         .padding(.bottom, 20)
                     
                     Text("New Oenophile")
-                        .font(.custom("Verdana", size: 36))
+                        .font(.custom("Didot", size: 36))
                         .bold()
                         .foregroundColor(cBlack)
                         .padding(.bottom, 60)
@@ -56,47 +56,47 @@ struct SignupView: View {
                     VStack(alignment: .leading, spacing: 20) {
                         // Username
                         Text("Username")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         TextField("Enter username", text: $newUsername)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         // Password
                         Text("Password")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         SecureField("Enter password", text: $newPassword)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         // Email Address
                         Text("Email Address")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         TextField("Enter email address", text: $newEmail)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         // Contact Number
                         Text("Contact")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         TextField("Enter contact", text: $newContact)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         // Address
                         Text("Address")
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(cBlack)
                         
                         TextField("Enter address", text: $newAddress)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     .padding(.horizontal, 40)
@@ -114,7 +114,7 @@ struct SignupView: View {
                         }
                     }) {
                         Text("Register")
-                            .font(.custom("Verdana", size: 20))
+                            .font(.custom("Didot", size: 20))
                             .bold()
                             .foregroundColor(cYellow)
                             .padding(10)
@@ -130,7 +130,7 @@ struct SignupView: View {
                         showSignupView = false
                     }) {
                         Text("I already have an account")
-                            .font(.custom("Verdana", size: 14))
+                            .font(.custom("Didot", size: 14))
                             .foregroundColor(cBlack)
                     }
                     .onTapGesture {
