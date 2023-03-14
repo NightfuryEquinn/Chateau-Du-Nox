@@ -99,7 +99,7 @@ struct LoginView: View {
                     .padding(.bottom, 20)
                     .disabled(!self.canAuthenticate())
                     .background(
-                        NavigationLink(destination: MainMenuView(), isActive: self.$isAuthenticated) {
+                        NavigationLink(destination: MainMenuContentView(), isActive: self.$isAuthenticated) {
                             EmptyView()
                         }
                     )
