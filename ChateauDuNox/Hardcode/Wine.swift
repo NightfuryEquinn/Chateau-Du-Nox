@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct Wine: Identifiable {
+struct Wine: Identifiable, Hashable {
     let id = UUID()
     let name: String
     let price: Double
     let phrase: String
     let content: String
     let rating: Decimal
+    let bottleImage: String
+    let coverImage: String
 }
