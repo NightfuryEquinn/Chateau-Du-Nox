@@ -1,5 +1,5 @@
 //
-//  WineDetails.swift
+//  WineDetailsView.swift
 //  ChateauDuNox
 //
 //  Created by YIP ZI XIAN on 14/03/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WineDetails: View {
+struct WineDetailsView: View {
     // Custom Colors
     let cBlack = Color(red: 0.14, green: 0.17, blue: 0.20)
     let cYellow = Color(red: 238.0/255.0, green: 235.0/255.0, blue: 209.0/255.0)
@@ -132,7 +132,7 @@ struct WineDetails: View {
     }
 }
 
-struct WineDetails_Previews: PreviewProvider {
+struct WineDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         let wine = Wine(
             name: "Default Wine",
@@ -144,7 +144,7 @@ struct WineDetails_Previews: PreviewProvider {
             coverImage: "Default Cover Image"
         )
         
-        WineDetails(
+        WineDetailsView(
             wine: Wine(
                 name: wine.name,
                 price: wine.price,

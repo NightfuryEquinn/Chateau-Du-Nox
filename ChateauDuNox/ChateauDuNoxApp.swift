@@ -13,8 +13,8 @@ struct ChateauDuNoxApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainMenuContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

@@ -133,7 +133,7 @@ struct WineRow: View {
     let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
     
     // State Variables
-    @State var showWineDetails = false
+    @State var showWineDetailsView = false
     
     let wine: Wine
 
@@ -168,7 +168,7 @@ struct WineRow: View {
                     Button(action: {
                         print("More")
                         
-                        self.showWineDetails = true
+                        self.showWineDetailsView = true
                     }) {
                         Text("More")
                             .font(.custom("Didot", size: 16))
@@ -181,8 +181,8 @@ struct WineRow: View {
                     }
                     .padding(.trailing, 100)
                     .padding(.vertical, 10)
-                    .sheet(isPresented: $showWineDetails) {
-                        WineDetails(wine: wine)
+                    .sheet(isPresented: $showWineDetailsView) {
+                        WineDetailsView(wine: wine)
                     }
                 }
             }
