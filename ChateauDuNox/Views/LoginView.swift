@@ -52,7 +52,7 @@ struct LoginView: View {
                         .ignoresSafeArea()
                     
                     Text("Chateau Du Nox")
-                        .font(.custom("Didot", size: 36))
+                        .font(.custom("Didot", size: 44))
                         .bold()
                         .foregroundColor(cBlack)
                         .padding(.bottom, 50)

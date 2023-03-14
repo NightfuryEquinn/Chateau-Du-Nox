@@ -13,7 +13,7 @@ struct Wine: Identifiable, Hashable {
     let price: Double
     let phrase: String
     let content: String
-    let rating: Decimal
+    let rating: Double
     let bottleImage: String
     let coverImage: String
 }

@@ -91,7 +91,7 @@ struct ForgotView: View {
                         .foregroundColor(cBlack)
                 }
                 .padding(.horizontal, 80)
-                .padding(.bottom, 30)
+                .padding(.bottom, 25)
             }
             .background(cYellow)
         }

@@ -43,7 +43,7 @@ struct WineData {
             content: "Blanc is a French term that simply means 'white.' It is often used to describe white wine varieties such as Sauvignon Blanc, Chardonnay, and Riesling. Blanc wines vary widely in flavor and aroma, depending on the grape variety and winemaking techniques used. They can range from light and crisp to full-bodied and rich. Blanc wines are often paired with seafood, chicken, and light pasta dishes.",
             rating: 8.6,
             bottleImage: "blanc-bottle",
-            coverImage: "blnac-grapes"
+            coverImage: "blanc-grapes"
         )
     ]
 }
