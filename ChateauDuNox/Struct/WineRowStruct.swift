@@ -8,12 +8,6 @@
 import SwiftUI
 
 struct WineRowStruct: View {
-    // Custom Colors
-    let cBlack = Color(red: 0.14, green: 0.17, blue: 0.20)
-    let cYellow = Color(red: 238.0/255.0, green: 235.0/255.0, blue: 209.0/255.0)
-    let cDarkGreen = Color(red: 68/255, green: 88/255, blue: 39/255)
-    let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
-    
     // State Variables
     @State var showWineDetailsView = false
     
@@ -32,19 +26,19 @@ struct WineRowStruct: View {
                 Text(wine.name)
                     .font(.custom("Didot", size: 24))
                     .bold()
-                    .foregroundColor(cBlack)
+                    .foregroundColor(AppColour.cBlack)
                 
                 Text(wine.phrase)
                     .font(.custom("Avenir Next", size: 14))
                     .padding(.bottom, 20)
                     .padding(.trailing, 20)
-                    .foregroundColor(cBlack)
+                    .foregroundColor(AppColour.cBlack)
                     .multilineTextAlignment(.leading)
                 
                 Text(String(format: "RM%.0f", wine.price))
                     .font(.custom("Didot", size: 20))
                     .padding(.bottom, 10)
-                    .foregroundColor(cBlack)
+                    .foregroundColor(AppColour.cBlack)
                 
                 HStack {
                     Button(action: {
@@ -55,10 +49,10 @@ struct WineRowStruct: View {
                         Text("More")
                             .font(.custom("Didot", size: 16))
                             .bold()
-                            .foregroundColor(cYellow)
+                            .foregroundColor(AppColour.cYellow)
                             .padding(5)
                             .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(cDarkGreen)
+                            .background(AppColour.cDarkGreen)
                             .cornerRadius(50)
                     }
                     .padding(.trailing, 100)

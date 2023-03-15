@@ -36,6 +36,7 @@
 		64CD64A329C18F0600C06DDC /* AppColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD64A229C18F0600C06DDC /* AppColour.swift */; };
 		64CD64A529C193C600C06DDC /* FormatChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD64A429C193C600C06DDC /* FormatChecker.swift */; };
 		64CD64A929C1A4F300C06DDC /* barrel-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 64CD64A829C1A4F300C06DDC /* barrel-cover.png */; };
+		64CD64AB29C1B6EB00C06DDC /* CartRowStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */; };
 		64E468FB29BFEF7400874300 /* blanc-bottle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F129BFEF7400874300 /* blanc-bottle.jpg */; };
 		64E468FC29BFEF7400874300 /* barbera-bottle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F229BFEF7400874300 /* barbera-bottle.jpg */; };
 		64E468FD29BFEF7400874300 /* blanc-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F329BFEF7400874300 /* blanc-grapes.jpg */; };
@@ -79,6 +80,7 @@
 		64CD64A229C18F0600C06DDC /* AppColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColour.swift; sourceTree = "<group>"; };
 		64CD64A429C193C600C06DDC /* FormatChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatChecker.swift; sourceTree = "<group>"; };
 		64CD64A829C1A4F300C06DDC /* barrel-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrel-cover.png"; sourceTree = "<group>"; };
+		64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRowStruct.swift; sourceTree = "<group>"; };
 		64E468F129BFEF7400874300 /* blanc-bottle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blanc-bottle.jpg"; sourceTree = "<group>"; };
 		64E468F229BFEF7400874300 /* barbera-bottle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-bottle.jpg"; sourceTree = "<group>"; };
 		64E468F329BFEF7400874300 /* blanc-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blanc-grapes.jpg"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				64CD649429C1896700C06DDC /* SearchBarStruct.swift */,
 				64CD649729C18ABB00C06DDC /* WineRowStruct.swift */,
+				64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				647805D429BF1D4E00018916 /* Wine.swift in Sources */,
 				647EF5D229BC349F002A9897 /* LoginView.swift in Sources */,
 				647EF5C929BC2247002A9897 /* SignupView.swift in Sources */,
+				64CD64AB29C1B6EB00C06DDC /* CartRowStruct.swift in Sources */,
 				64A80A1229C04E190055E91B /* ProfileView.swift in Sources */,
 				64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */,
 			);

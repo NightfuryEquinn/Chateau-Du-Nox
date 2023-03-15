@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct CrateView: View {
-    // State Variables
-    @State var quantity: Int = 1
+    // Values won't update (Debug tomorrow)
+    let cartRow = CartRowStruct()
+    
+    var taxPrice: Double {
+        cartRow.basePrice * 0.26
+    }
+    
+    var totalPrice: Double {
+        cartRow.basePrice + taxPrice + 59.90
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -30,88 +38,79 @@ struct CrateView: View {
                         .foregroundColor(AppColour.cBlack)
                         .padding(.bottom, 15)
                     
-                    VStack {
-                        VStack {
-                            HStack {
-                                Image("pinot-noir-bottle")
-                                    .resizable()
-                                    .frame(width: 60.0, height: 175.0)
-                                    .cornerRadius(10.0)
-                                    .aspectRatio(contentMode: .fill)
-                                    .padding(.trailing, 20)
-                                
-                                VStack {
-                                    Text("Pinot Noir")
-                                        .font(.custom("Didot", size: 24))
-                                        .bold()
-                                        .foregroundColor(AppColour.cYellow)
-                                        .multilineTextAlignment(.leading)
-                                    
-                                    Text("RM135")
-                                        .font(.custom("Didot", size: 20))
-                                        .padding(.bottom, 10)
-                                        .foregroundColor(AppColour.cYellow)
-                                        .multilineTextAlignment(.leading)
-                                    
-                                    HStack {
-                                        Button(action: {
-                                            // Increase quantity
-                                            self.quantity += 1
-                                        }) {
-                                            Image(systemName: "plus")
-                                                .foregroundColor(AppColour.cLightGreen)
-                                                .background(AppColour.cYellow)
-                                                .padding(5)
-                                                .cornerRadius(10.0)
-                                        }
-                                        
-                                        Text("\(quantity)")
-                                            .font(.custom("Didot", size: 20))
-                                            .padding(.bottom, 10)
-                                            .foregroundColor(AppColour.cYellow)
-                                        
-                                        Button(action: {
-                                            // Decrease quantity
-                                            if self.quantity > 1 {
-                                                self.quantity -= 1
-                                            }
-                                        }) {
-                                            Image(systemName: "minus")
-                                                .foregroundColor(AppColour.cLightGreen)
-                                                .background(AppColour.cYellow)
-                                                .padding(5)
-                                                .cornerRadius(10.0)
-                                        }
-                                        
-                                        Spacer()
-                                    }
-                                    
-                                    Button(action: {
-                                        print("Remove")
-                                    }) {
-                                        HStack {
-                                            Spacer()
-                                            Text("Remove")
-                                                .font(.custom("Didot", size: 16))
-                                                .bold()
-                                                .foregroundColor(AppColour.cYellow)
-                                                .padding(5)
-                                                .frame(minWidth: 0, maxWidth: .infinity)
-                                                .background(AppColour.cLightGreen)
-                                                .cornerRadius(50)
-                                        }
-                                    }
-                                    .padding(.vertical, 20)
-                                    .padding(.leading, 75)
-                                    .padding(.trailing, 35)
-                                }
-                            }
-                        }
-                        .padding(20)
+                    LazyVStack {
+                        CartRowStruct()
                     }
                     .background(AppColour.cDarkGreen)
                     .cornerRadius(10.0)
-//                    .padding(.horizontal, 35)
+                    .padding(.horizontal, 35)
+                    .padding(.bottom, 30)
+                    
+                    VStack(alignment: .leading, spacing: 20.0) {
+                        HStack {
+                            Text("Base Price: ")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                            
+                            Text("RM\(String(format: "%.2f", cartRow.basePrice))")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                        }
+                        
+                        HStack {
+                            Text("Shipping Fee: ")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                            
+                            Text("RM59.90")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                        }
+                        
+                        HStack {
+                            Text("Tax (26%): ")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                            
+                            Text("RM\(String(format: "%.2f", taxPrice))")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                        }
+                        
+                        HStack {
+                            Text("Total Price: ")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                            
+                            Text("RM\(String(format: "%.2f", totalPrice))")
+                                .font(.custom("Didot", size: 18))
+                                .bold()
+                                .foregroundColor(AppColour.cBlack)
+                        }
+                    }
+                    .padding(.bottom, 30)
+                    
+                    Button(action: {
+                        print("Checkout")
+                    }) {
+                        Text("Checkout")
+                            .font(.custom("Didot", size: 20))
+                            .bold()
+                            .foregroundColor(AppColour.cYellow)
+                            .padding(10)
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .background(AppColour.cDarkGreen)
+                            .cornerRadius(50)
+                    }
+                    .padding(.horizontal, 120)
+                    .padding(.bottom, 20)
                 }
             }
             .edgesIgnoringSafeArea(.all)
