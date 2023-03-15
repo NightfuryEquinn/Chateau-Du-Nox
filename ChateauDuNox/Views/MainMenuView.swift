@@ -16,17 +16,66 @@ let bottomBarItemsWhenLogin: [BottomBarItem] = [
 ]
 
 struct MainMenuView: View {
-    // Custom Colors
-    let cBlack = Color(red: 0.14, green: 0.17, blue: 0.20)
-    let cYellow = Color(red: 238.0/255.0, green: 235.0/255.0, blue: 209.0/255.0)
-    let cDarkGreen = Color(red: 68/255, green: 88/255, blue: 39/255)
-    let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
-    
     let item: BottomBarItem
     
+    // Wines Data
+    let wines = WineData.wineData
+    
+    // State Variables
+    @State private var searchText = ""
+    @State private var filteredWines = [Wine]()
+    
     var body: some View {
-        VStack {
-            Text("Main Menu")
+        NavigationView {
+            GeometryReader { geometry in
+                AppColour.cYellow.ignoresSafeArea()
+                
+                VStack {
+                    Image("chateauLogo")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 10)
+                        .padding(.bottom, 75)
+                    
+                    SearchBarStruct(text: $searchText)
+                        .onChange(of: searchText) { searchText in
+                            if searchText.isEmpty {
+                                filteredWines = wines
+                            } else {
+                                filteredWines = wines.filter {
+                                    $0.name.lowercased().contains(searchText.lowercased())
+                                }
+                            }
+                        }
+                    
+                    ScrollView {
+                        LazyVStack(alignment: .leading) {
+                            ForEach(filteredWines, id:\.self) { wine in
+                                WineRowStruct(wine: wine)
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 40)
+                }
+            }
+            .background(AppColour.cYellow)
+            .navigationBarHidden(true)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarBackButtonHidden(true)
+        .onAppear {
+            filterWines()
+        }
+    }
+        
+    // All wines appear first
+    func filterWines() {
+        if searchText.isEmpty {
+            filteredWines = wines
+        } else {
+            filteredWines = wines.filter { wine in
+                wine.name.localizedCaseInsensitiveContains(searchText)
+            }
         }
     }
 }
@@ -64,12 +113,13 @@ struct MainMenuContentView: View {
                     }
                     
                     BottomBar(selectedIndex: $selectedIndex, items: bottomBarItemsWhenLogin)
-                        .background(cYellow)
+                        .background(AppColour.cYellow)
                 }
+                .background(AppColour.cYellow)
             }
             .navigationBarBackButtonHidden(true)
         }
-        .background(cYellow)
+        .background(AppColour.cYellow)
         .navigationBarHidden(true)
     }
 }

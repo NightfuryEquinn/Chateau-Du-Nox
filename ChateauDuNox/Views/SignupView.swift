@@ -9,12 +9,6 @@ import SwiftUI
 import CoreData
 
 struct SignupView: View {
-    // Custom Colors
-    let cBlack = Color(red: 0.14, green: 0.17, blue: 0.20)
-    let cYellow = Color(red: 238.0/255.0, green: 235.0/255.0, blue: 209.0/255.0)
-    let cDarkGreen = Color(red: 68/255, green: 88/255, blue: 39/255)
-    let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
-    
     // Database
     @Environment(\.managedObjectContext) var viewContext
     
@@ -37,7 +31,7 @@ struct SignupView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            cYellow.ignoresSafeArea()
+            AppColour.cYellow.ignoresSafeArea()
             
             ScrollView {
                 VStack {
@@ -50,14 +44,14 @@ struct SignupView: View {
                     Text("New Oenophile")
                         .font(.custom("Didot", size: 36))
                         .bold()
-                        .foregroundColor(cBlack)
+                        .foregroundColor(AppColour.cBlack)
                         .padding(.bottom, 60)
                     
                     VStack(alignment: .leading, spacing: 20) {
                         // Username
                         Text("Username")
                             .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(cBlack)
+                            .foregroundColor(AppColour.cBlack)
                         
                         TextField("Enter username", text: $newUsername)
                             .font(.custom("Avenir Next", size: 18))
@@ -66,7 +60,7 @@ struct SignupView: View {
                         // Password
                         Text("Password")
                             .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(cBlack)
+                            .foregroundColor(AppColour.cBlack)
                         
                         SecureField("Enter password", text: $newPassword)
                             .font(.custom("Avenir Next", size: 18))
@@ -75,7 +69,7 @@ struct SignupView: View {
                         // Email Address
                         Text("Email Address")
                             .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(cBlack)
+                            .foregroundColor(AppColour.cBlack)
                         
                         TextField("Enter email address", text: $newEmail)
                             .font(.custom("Avenir Next", size: 18))
@@ -84,7 +78,7 @@ struct SignupView: View {
                         // Contact Number
                         Text("Contact")
                             .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(cBlack)
+                            .foregroundColor(AppColour.cBlack)
                         
                         TextField("Enter contact", text: $newContact)
                             .font(.custom("Avenir Next", size: 18))
@@ -93,7 +87,7 @@ struct SignupView: View {
                         // Address
                         Text("Address")
                             .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(cBlack)
+                            .foregroundColor(AppColour.cBlack)
                         
                         TextField("Enter address", text: $newAddress)
                             .font(.custom("Avenir Next", size: 18))
@@ -116,10 +110,10 @@ struct SignupView: View {
                         Text("Register")
                             .font(.custom("Didot", size: 20))
                             .bold()
-                            .foregroundColor(cYellow)
+                            .foregroundColor(AppColour.cYellow)
                             .padding(10)
                             .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(cDarkGreen)
+                            .background(AppColour.cDarkGreen)
                             .cornerRadius(50)
                     }
                     .padding(.horizontal, 120)
@@ -131,7 +125,7 @@ struct SignupView: View {
                     }) {
                         Text("I already have an account")
                             .font(.custom("Didot", size: 14))
-                            .foregroundColor(cBlack)
+                            .foregroundColor(AppColour.cBlack)
                     }
                     .onTapGesture {
                         showSignupView = false

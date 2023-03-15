@@ -8,12 +8,6 @@
 import SwiftUI
 
 struct ForgotView: View {
-    // Custom Colors
-    let cBlack = Color(red: 0.14, green: 0.17, blue: 0.20)
-    let cYellow = Color(red: 238.0/255.0, green: 235.0/255.0, blue: 209.0/255.0)
-    let cDarkGreen = Color(red: 68/255, green: 88/255, blue: 39/255)
-    let cLightGreen = Color(red: 103/255, green: 132/255, blue: 56/255)
-    
     @State private var inEmail = ""
     @State private var inNewPassword = ""
     
@@ -22,7 +16,7 @@ struct ForgotView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            cYellow.ignoresSafeArea()
+            AppColour.cYellow.ignoresSafeArea()
             
             VStack {
                 Image("riesling-cover")
@@ -34,13 +28,13 @@ struct ForgotView: View {
                 Text("Forgot Password")
                     .font(.custom("Didot", size: 36))
                     .bold()
-                    .foregroundColor(cBlack)
+                    .foregroundColor(AppColour.cBlack)
                     .padding(.bottom, 60)
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Email Address")
                         .font(.custom("Avenir Next", size: 18))
-                        .foregroundColor(cBlack)
+                        .foregroundColor(AppColour.cBlack)
                     
                     TextField("Email Address", text: $inEmail)
                         .font(.custom("Avenir Next", size: 18))
@@ -48,7 +42,7 @@ struct ForgotView: View {
                     
                     Text("New Password")
                         .font(.custom("Avenir Next", size: 18))
-                        .foregroundColor(cBlack)
+                        .foregroundColor(AppColour.cBlack)
                     
                     SecureField("New Password", text: $inNewPassword)
                         .font(.custom("Avenir Next", size: 18))
@@ -73,10 +67,10 @@ struct ForgotView: View {
                     Text("Update")
                         .font(.custom("Didot", size: 20))
                         .bold()
-                        .foregroundColor(cYellow)
+                        .foregroundColor(AppColour.cYellow)
                         .padding(10)
                         .frame(minWidth: 0, maxWidth: .infinity)
-                        .background(cDarkGreen)
+                        .background(AppColour.cDarkGreen)
                         .cornerRadius(50)
                 }
                 .padding(.horizontal, 120)
@@ -88,12 +82,12 @@ struct ForgotView: View {
                 }) {
                     Text("Contact Service")
                         .font(.custom("Didot", size: 14))
-                        .foregroundColor(cBlack)
+                        .foregroundColor(AppColour.cBlack)
                 }
                 .padding(.horizontal, 80)
                 .padding(.bottom, 25)
             }
-            .background(cYellow)
+            .background(AppColour.cYellow)
         }
     }
     
