@@ -12,109 +12,104 @@ struct ProfileView: View {
     @State var showUpdateProfileView = false
     
     var body: some View {
-        GeometryReader { geometry in
-            AppColour.cYellow.ignoresSafeArea()
-            
-            ScrollView {
+        ScrollView {
+            VStack {
+                Image("vineyard-cover")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 250)
+                    .edgesIgnoringSafeArea(.all)
+                    .padding(.bottom, 30)
+                
+                Text("Profile")
+                    .font(.custom("Didot", size: 44))
+                    .bold()
+                    .foregroundColor(AppColour.cBlack)
+                    .padding(.bottom, 15)
+                
+                Image("pp-placeholder")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150)
+                    .clipped()
+                    .cornerRadius(100.0)
+                    .padding(.bottom, 20)
+                    .aspectRatio(contentMode: .fill)
+                
+                Text("Yelan")
+                    .font(.custom("Didot", size: 32))
+                    .bold()
+                    .foregroundColor(AppColour.cBlack)
+                    .padding(.bottom, 40)
+                
                 VStack {
-                    Image("vineyard-cover")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 250)
-                        .edgesIgnoringSafeArea(.all)
-                        .padding(.bottom, 30)
-                    
-                    Text("Profile")
-                        .font(.custom("Didot", size: 44))
-                        .bold()
-                        .foregroundColor(AppColour.cBlack)
-                        .padding(.bottom, 15)
-                    
-                    Image("pp-placeholder")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 150, height: 150)
-                        .clipped()
-                        .cornerRadius(100.0)
-                        .padding(.bottom, 20)
-                        .aspectRatio(contentMode: .fill)
-                    
-                    Text("Yelan")
-                        .font(.custom("Didot", size: 32))
-                        .bold()
-                        .foregroundColor(AppColour.cBlack)
-                        .padding(.bottom, 40)
+                    VStack {
+                        Text("Email Address")
+                            .font(.custom("Avenir Next", size: 18))
+                            .foregroundColor(AppColour.cBlack)
+                            .bold()
+                        
+                        Text("yelan@gmail.com")
+                            .font(.custom("Avenir Next", size: 18))
+                            .foregroundColor(AppColour.cBlack)
+                            .multilineTextAlignment(.center)
+                    }
+                    .padding(.bottom, 20)
                     
                     VStack {
-                        VStack {
-                            Text("Email Address")
-                                .font(.custom("Avenir Next", size: 18))
-                                .foregroundColor(AppColour.cBlack)
-                                .bold()
-                            
-                            Text("yelan@gmail.com")
-                                .font(.custom("Avenir Next", size: 18))
-                                .foregroundColor(AppColour.cBlack)
-                                .multilineTextAlignment(.center)
-                        }
-                        .padding(.bottom, 20)
+                        Text("Contact Number")
+                            .font(.custom("Avenir Next", size: 18))
+                            .foregroundColor(AppColour.cBlack)
+                            .bold()
                         
-                        VStack {
-                            Text("Contact Number")
-                                .font(.custom("Avenir Next", size: 18))
-                                .foregroundColor(AppColour.cBlack)
-                                .bold()
-                            
-                            Text("0126553221")
-                                .font(.custom("Avenir Next", size: 18))
-                                .foregroundColor(AppColour.cBlack)
-                                .multilineTextAlignment(.center)
-                        }
-                        .padding(.bottom, 20)
-                        
-                        VStack {
-                            Text("Address")
-                                .font(.custom("Avenir Next", size: 18))
-                                .foregroundColor(AppColour.cBlack)
-                                .bold()
-                            
-                            Text("62, Jalan Liyue, Taman Teyvat, Genshin 98002, Hoyoverse")
-                                .font(.custom("Avenir Next", size: 18))
-                                .foregroundColor(AppColour.cBlack)
-                                .multilineTextAlignment(.center)
-                        }
-                        .padding(.bottom, 20)
+                        Text("0126553221")
+                            .font(.custom("Avenir Next", size: 18))
+                            .foregroundColor(AppColour.cBlack)
+                            .multilineTextAlignment(.center)
                     }
-                    .padding(.horizontal, 35)
+                    .padding(.bottom, 20)
                     
-                    Button(action: {
-                        print("Edit")
+                    VStack {
+                        Text("Address")
+                            .font(.custom("Avenir Next", size: 18))
+                            .foregroundColor(AppColour.cBlack)
+                            .bold()
                         
-                        self.showUpdateProfileView = true
-                    }) {
-                        HStack {
-                            Spacer()
-                            Text("Edit")
-                                .font(.custom("Didot", size: 16))
-                                .bold()
-                                .foregroundColor(AppColour.cYellow)
-                                .padding(5)
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .background(AppColour.cLightGreen)
-                                .cornerRadius(50)
-                        }
+                        Text("62, Jalan Liyue, Taman Teyvat, Genshin 98002, Hoyoverse")
+                            .font(.custom("Avenir Next", size: 18))
+                            .foregroundColor(AppColour.cBlack)
+                            .multilineTextAlignment(.center)
                     }
-                    .padding(.vertical, 20)
-                    .padding(.leading, 250)
-                    .padding(.trailing, 35)
-                    .sheet(isPresented: $showUpdateProfileView) {
-                        UpdateProfileView(showUpdateProfileView: $showUpdateProfileView)
+                    .padding(.bottom, 20)
+                }
+                .padding(.horizontal, 35)
+                
+                Button(action: {
+                    print("Edit")
+                    
+                    self.showUpdateProfileView = true
+                }) {
+                    HStack {
+                        Spacer()
+                        Text("Edit")
+                            .font(.custom("Didot", size: 16))
+                            .bold()
+                            .foregroundColor(AppColour.cYellow)
+                            .padding(5)
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .background(AppColour.cLightGreen)
+                            .cornerRadius(50)
                     }
                 }
+                .padding(.vertical, 20)
+                .padding(.leading, 250)
+                .padding(.trailing, 35)
+                .sheet(isPresented: $showUpdateProfileView) {
+                    UpdateProfileView(showUpdateProfileView: $showUpdateProfileView)
+                }
             }
-            .edgesIgnoringSafeArea(.all)
         }
-        .background(AppColour.cYellow)
+        .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
     }
 }

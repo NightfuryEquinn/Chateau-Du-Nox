@@ -59,10 +59,11 @@ struct MainMenuView: View {
                 }
             }
             .background(AppColour.cYellow)
-            .navigationBarHidden(true)
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
         .onAppear {
             filterWines()
         }
