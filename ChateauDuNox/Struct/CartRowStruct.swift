@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct CartRowStruct: View {
-    // State Variables
-    @State var quantity: Int = 1
-    @State var basePrice = 135.0
-    
-    let itemPrice = 135.0
+    @Binding var cartItem: CartItemStruct
     
     var body: some View {
+        
         VStack {
             HStack {
-                Image("pinot-noir-bottle")
+                Image(cartItem.bottleImage)
                     .resizable()
                     .frame(width: 60.0, height: 175.0)
                     .cornerRadius(10.0)
@@ -25,45 +22,21 @@ struct CartRowStruct: View {
                     .padding(.trailing, 35)
                 
                 VStack(alignment: .leading) {
-                    Text("Pinot Noir")
+                    Text(cartItem.name)
                         .font(.custom("Didot", size: 24))
                         .bold()
                         .padding(.bottom, 10)
                         .foregroundColor(AppColour.cYellow)
                     
-                    Text("RM135")
+                    Text(String(format: "RM%.0f", cartItem.basePrice))
                         .font(.custom("Didot", size: 20))
                         .bold()
                         .padding(.bottom, 10)
                         .foregroundColor(AppColour.cYellow)
                     
                     HStack(alignment: .center) {
-                        Button(action: {
-                            // Decrease quantity
-                            if quantity > 1 {
-                                quantity -= 1
-                                basePrice -= itemPrice
-                            }
-                        }) {
-                            Image(systemName: "minus")
-                                .foregroundColor(AppColour.cYellow)
-                                .cornerRadius(10.0)
-                        }
-                        
-                        Text("\(quantity)")
-                            .padding(.horizontal, 10.0)
-                            .font(.custom("Didot", size: 20))
+                        Stepper("\(cartItem.quantity)", value: $cartItem.quantity, in: 1...12)
                             .foregroundColor(AppColour.cYellow)
-                        
-                        Button(action: {
-                            // Increase quantity
-                            quantity += 1
-                            basePrice += itemPrice
-                        }) {
-                            Image(systemName: "plus")
-                                .foregroundColor(AppColour.cYellow)
-                                .cornerRadius(10.0)
-                        }
                     }
                     .padding(10)
                     
@@ -94,6 +67,22 @@ struct CartRowStruct: View {
 
 struct CartRowStruct_Previews: PreviewProvider {
     static var previews: some View {
-        CartRowStruct()
+        let cartItem = CartItemStruct(
+            name: "Default Name",
+            bottleImage: "Default Bottle Image",
+            basePrice: 0,
+            quantity: 1
+        )
+        
+        CartRowStruct(
+            cartItem: .constant(
+                CartItemStruct(
+                    name: cartItem.name,
+                    bottleImage: cartItem.bottleImage,
+                    basePrice: cartItem.basePrice,
+                    quantity: cartItem.quantity
+                )
+            )
+        )
     }
 }

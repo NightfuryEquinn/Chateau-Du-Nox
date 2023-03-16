@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct CrateView: View {
-    // Values won't update (Debug tomorrow)
-    let cartRow = CartRowStruct()
+    @State var items: [CartItemStruct] = [
+        CartItemStruct(name: "Pinot Noir", bottleImage: "pinot-noir-bottle", basePrice: 135.0, quantity: 1),
+        CartItemStruct(name: "Erbaluce", bottleImage: "erbaluce-bottle", basePrice: 156.0, quantity: 1)
+    ]
     
     var taxPrice: Double {
-        cartRow.basePrice * 0.26
+        return items.reduce(0) { $0 + $1.taxPrice }
     }
     
     var totalPrice: Double {
-        cartRow.basePrice + taxPrice + 59.90
+        return items.reduce(0) { $0 + $1.totalPrice }
     }
     
     var body: some View {
@@ -39,7 +41,9 @@ struct CrateView: View {
                         .padding(.bottom, 15)
                     
                     LazyVStack {
-                        CartRowStruct()
+                        ForEach(items.indices, id: \.self) { index in
+                            CartRowStruct(cartItem: $items[index])
+                        }
                     }
                     .background(AppColour.cDarkGreen)
                     .cornerRadius(10.0)
@@ -47,18 +51,6 @@ struct CrateView: View {
                     .padding(.bottom, 30)
                     
                     VStack(alignment: .leading, spacing: 20.0) {
-                        HStack {
-                            Text("Base Price: ")
-                                .font(.custom("Didot", size: 18))
-                                .bold()
-                                .foregroundColor(AppColour.cBlack)
-                            
-                            Text("RM\(String(format: "%.2f", cartRow.basePrice))")
-                                .font(.custom("Didot", size: 18))
-                                .bold()
-                                .foregroundColor(AppColour.cBlack)
-                        }
-                        
                         HStack {
                             Text("Shipping Fee: ")
                                 .font(.custom("Didot", size: 18))
@@ -89,7 +81,7 @@ struct CrateView: View {
                                 .bold()
                                 .foregroundColor(AppColour.cBlack)
                             
-                            Text("RM\(String(format: "%.2f", totalPrice))")
+                            Text("RM\(String(format: "%.2f", totalPrice + 59.90))")
                                 .font(.custom("Didot", size: 18))
                                 .bold()
                                 .foregroundColor(AppColour.cBlack)
@@ -117,7 +109,6 @@ struct CrateView: View {
         }
         .background(AppColour.cYellow)
         .navigationBarHidden(true)
-
     }
 }
 
