@@ -12,6 +12,7 @@
 		6423BD9C29C2A846003F044D /* cellar-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 6423BD9B29C2A846003F044D /* cellar-cover.png */; };
 		6423BDA129C2A9B8003F044D /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 6423BD9F29C2A9B8003F044D /* visa.png */; };
 		6423BDA229C2A9B8003F044D /* mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6423BDA029C2A9B8003F044D /* mastercard.png */; };
+		6423BDA629C2C7E9003F044D /* FilterBarStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6423BDA529C2C7E9003F044D /* FilterBarStruct.swift */; };
 		64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */; };
 		647805C929BEEE3E00018916 /* chateauLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 647805C829BEEE3E00018916 /* chateauLogo.png */; };
 		647805CB29BEF69500018916 /* pinot-noir-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 647805CA29BEF69500018916 /* pinot-noir-bottle.png */; };
@@ -30,7 +31,7 @@
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
 		64A80A1229C04E190055E91B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1129C04E190055E91B /* ProfileView.swift */; };
 		64A80A1429C04E2B0055E91B /* CrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1329C04E2B0055E91B /* CrateView.swift */; };
-		64A80A1629C04E420055E91B /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1529C04E420055E91B /* OrderView.swift */; };
+		64A80A1629C04E420055E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1529C04E420055E91B /* HistoryView.swift */; };
 		64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */; };
 		64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */; };
 		64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */; };
@@ -60,6 +61,7 @@
 		6423BD9B29C2A846003F044D /* cellar-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellar-cover.png"; sourceTree = "<group>"; };
 		6423BD9F29C2A9B8003F044D /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
 		6423BDA029C2A9B8003F044D /* mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mastercard.png; sourceTree = "<group>"; };
+		6423BDA529C2C7E9003F044D /* FilterBarStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBarStruct.swift; sourceTree = "<group>"; };
 		64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotAuthentication.swift; sourceTree = "<group>"; };
 		647805C829BEEE3E00018916 /* chateauLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chateauLogo.png; sourceTree = "<group>"; };
 		647805CA29BEF69500018916 /* pinot-noir-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinot-noir-bottle.png"; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
 		64A80A1129C04E190055E91B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		64A80A1329C04E2B0055E91B /* CrateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateView.swift; sourceTree = "<group>"; };
-		64A80A1529C04E420055E91B /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		64A80A1529C04E420055E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riesling-cover.jpeg"; sourceTree = "<group>"; };
 		64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-cover.jpeg"; sourceTree = "<group>"; };
 		64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 		647EF5CA29BC2250002A9897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				64A80A1529C04E420055E91B /* OrderView.swift */,
+				64A80A1529C04E420055E91B /* HistoryView.swift */,
 				64A80A1329C04E2B0055E91B /* CrateView.swift */,
 				64A80A1129C04E190055E91B /* ProfileView.swift */,
 				647EF5C629BC2224002A9897 /* LoginView.swift */,
@@ -225,6 +227,7 @@
 				64CD649729C18ABB00C06DDC /* WineRowStruct.swift */,
 				64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */,
 				6423BD9529C292B3003F044D /* CartItemStruct.swift */,
+				6423BDA529C2C7E9003F044D /* FilterBarStruct.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -332,11 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A80A1429C04E2B0055E91B /* CrateView.swift in Sources */,
-				64A80A1629C04E420055E91B /* OrderView.swift in Sources */,
+				64A80A1629C04E420055E91B /* HistoryView.swift in Sources */,
 				647805CF29BF0F8000018916 /* MainMenuView.swift in Sources */,
 				64E4690629BFF68600874300 /* WineDetailsView.swift in Sources */,
 				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
 				647805CD29BF0EA800018916 /* GuestMenuView.swift in Sources */,
+				6423BDA629C2C7E9003F044D /* FilterBarStruct.swift in Sources */,
 				64C9ABA029BC6C6000025C95 /* UserAuthentication.swift in Sources */,
 				64CD649529C1896700C06DDC /* SearchBarStruct.swift in Sources */,
 				64CD64A529C193C600C06DDC /* FormatChecker.swift in Sources */,

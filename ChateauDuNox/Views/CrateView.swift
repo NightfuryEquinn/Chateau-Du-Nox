@@ -42,9 +42,15 @@ struct CrateView: View {
                 LazyVStack {
                     ForEach(items.indices, id: \.self) { index in
                         CartRowStruct(cartItem: $items[index])
+                        
+                        if index != items.indices.last {
+                            Divider()
+                                .background(AppColour.cBlack)
+                                .padding(.horizontal, 35.0)
+                        }
                     }
                 }
-                .background(AppColour.cDarkGreen)
+                .background(AppColour.cLightGreen)
                 .cornerRadius(10.0)
                 .padding(.horizontal, 35)
                 .padding(.bottom, 30)
@@ -63,7 +69,7 @@ struct CrateView: View {
                     }
                     
                     HStack {
-                        Text("Tax (26%): ")
+                        Text("Tax 26%: ")
                             .font(.custom("Didot", size: 18))
                             .bold()
                             .foregroundColor(AppColour.cBlack)

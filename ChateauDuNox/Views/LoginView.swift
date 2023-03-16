@@ -8,13 +8,13 @@
 import SwiftUI
 import BottomBar_SwiftUI
 
+// Bottom Bar Items
+let bottomBarItems: [BottomBarItem] = [
+    BottomBarItem(icon: "person.crop.circle", title: "Login", color: Color(red: 103/255, green: 132/255, blue: 56/255)),
+    BottomBarItem(icon: "house", title: "Main Menu", color: Color(red: 103/255, green: 132/255, blue: 56/255))
+]
+
 struct LoginView: View {
-    // Bottom Bar Items
-    let bottomBarItems: [BottomBarItem] = [
-        BottomBarItem(icon: "person.crop.circle", title: "Login", color: Color(red: 103/255, green: 132/255, blue: 56/255)),
-        BottomBarItem(icon: "house", title: "Main Menu", color: Color(red: 103/255, green: 132/255, blue: 56/255))
-    ]
-    
     // State Boolean
     @State var showSignupView = false
     @State var showForgotView = false
@@ -29,124 +29,95 @@ struct LoginView: View {
     @State private var inUsername = ""
     @State private var inPassword = ""
     
-    // State Index
-    @State private var selectedIndex: Int = 0
-    
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                AppColour.cYellow.ignoresSafeArea()
+        VStack {
+            Image("pinot-noir-cover")
+                .resizable()
+                .scaledToFill()
+                .frame(height: 225)
+                .clipped()
+                .ignoresSafeArea()
+            
+            Text("Chateau Du Nox")
+                .font(.custom("Didot", size: 44))
+                .bold()
+                .foregroundColor(AppColour.cBlack)
+                .padding(.bottom, 50)
+            
+            VStack(alignment: .leading, spacing: 20) {
+                Text("Username")
+                    .font(.custom("Avenir Next", size: 18))
+                    .foregroundColor(AppColour.cBlack)
                 
-                VStack {
-                    Image("pinot-noir-cover")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 225)
-                        .clipped()
-                        .ignoresSafeArea()
-                    
-                    Text("Chateau Du Nox")
-                        .font(.custom("Didot", size: 44))
-                        .bold()
-                        .foregroundColor(AppColour.cBlack)
-                        .padding(.bottom, 50)
-                    
-                    VStack(alignment: .leading, spacing: 20) {
-                        Text("Username")
-                            .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(AppColour.cBlack)
-                        
-                        TextField("Enter username", text: $inUsername)
-                            .font(.custom("Avenir Next", size: 18))
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                        
-                        Text("Password")
-                            .font(.custom("Avenir Next", size: 18))
-                            .foregroundColor(AppColour.cBlack)
-                        
-                        SecureField("Enter password", text: $inPassword)
-                            .font(.custom("Avenir Next", size: 18))
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    .padding(.horizontal, 40)
-                    .padding(.bottom, 50)
-                    
-                    Button(action: {
-                        print("Login")
-                        
-                        print(userAuthentication(username: inUsername, password: inPassword))
-                        
-                        if(userAuthentication(username: inUsername, password: inPassword)) {
-                            self.authenticate()
-                        }
-                    }) {
-                        Text("Login")
-                            .font(.custom("Didot", size: 20))
-                            .bold()
-                            .foregroundColor(AppColour.cYellow)
-                            .padding(10)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(AppColour.cDarkGreen)
-                            .cornerRadius(50)
-                    }
-                    .padding(.horizontal, 120)
-                    .padding(.bottom, 20)
-                    .disabled(!self.canAuthenticate())
-                    .background(
-                        NavigationLink(destination: MainMenuContentView(), isActive: self.$isAuthenticated) {
-                            EmptyView()
-                        }
-                    )
-                    
-                    VStack {
-                        Button(action: {
-                            self.showSignupView = true
-                        }) {
-                            Text("Register")
-                                .font(.custom("Didot", size: 14))
-                                .foregroundColor(AppColour.cBlack)
-                        }
-                        .sheet(isPresented: $showSignupView) {
-                            SignupView(showSignupView: $showSignupView)
-                        }
-                        .padding(.bottom, 10)
-                        
-                        Button(action: {
-                            self.showForgotView = true
-                        }) {
-                            Text("Forgot Password")
-                                .font(.custom("Didot", size: 14))
-                                .foregroundColor(AppColour.cBlack)
-                        }
-                        .sheet(isPresented: $showForgotView) {
-                            ForgotView(showForgotView: $showForgotView)
-                        }
-                        .padding(.bottom, 10)
-                    }
-
-                    BottomBar(selectedIndex: self.$selectedIndex, items: bottomBarItems)
-                        .padding(.horizontal, 60)
-                        .onChange(of: selectedIndex) { index in
-                            if index == 1 {
-                                self.isLoginViewActive = false
-                                self.isGuestMenuViewActive = true
-                                self.selectedIndex = 1
-                                
-                            } else {
-                                self.isLoginViewActive = true
-                                self.isGuestMenuViewActive = false
-                                self.selectedIndex = 0
-                            }
-                        }
-                        .background(
-                            NavigationLink(destination: GuestMenuView(isLoginViewActive: $isLoginViewActive, isGuestMenuViewActive: $isGuestMenuViewActive, selectedIndex: $selectedIndex), isActive: self.$isGuestMenuViewActive, label: { EmptyView() })
-                        )
-                }
-                .background(AppColour.cYellow)
-                .navigationBarHidden(true)
+                TextField("Enter username", text: $inUsername)
+                    .font(.custom("Avenir Next", size: 18))
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                Text("Password")
+                    .font(.custom("Avenir Next", size: 18))
+                    .foregroundColor(AppColour.cBlack)
+                
+                SecureField("Enter password", text: $inPassword)
+                    .font(.custom("Avenir Next", size: 18))
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-            .navigationViewStyle(StackNavigationViewStyle())
+            .padding(.horizontal, 40)
+            .padding(.bottom, 50)
+            
+            Button(action: {
+                print("Login")
+                
+                print(userAuthentication(username: inUsername, password: inPassword))
+                
+                if(userAuthentication(username: inUsername, password: inPassword)) {
+                    self.authenticate()
+                }
+            }) {
+                Text("Login")
+                    .font(.custom("Didot", size: 20))
+                    .bold()
+                    .foregroundColor(AppColour.cYellow)
+                    .padding(10)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .background(AppColour.cDarkGreen)
+                    .cornerRadius(50)
+            }
+            .padding(.horizontal, 120)
+            .padding(.bottom, 20)
+            .disabled(!self.canAuthenticate())
+            .background(
+                NavigationLink(destination: MainMenuContentView(), isActive: self.$isAuthenticated) {
+                    EmptyView()
+                }
+            )
+            
+            VStack {
+                Button(action: {
+                    self.showSignupView = true
+                }) {
+                    Text("Register")
+                        .font(.custom("Didot", size: 14))
+                        .foregroundColor(AppColour.cBlack)
+                }
+                .sheet(isPresented: $showSignupView) {
+                    SignupView(showSignupView: $showSignupView)
+                }
+                .padding(.bottom, 10)
+                
+                Button(action: {
+                    self.showForgotView = true
+                }) {
+                    Text("Forgot Password")
+                        .font(.custom("Didot", size: 14))
+                        .foregroundColor(AppColour.cBlack)
+                }
+                .sheet(isPresented: $showForgotView) {
+                    ForgotView(showForgotView: $showForgotView)
+                }
+                .padding(.bottom, 10)
+            }
         }
+        .navigationBarHidden(true)
     }
     
     // Enable and disable button
@@ -156,6 +127,41 @@ struct LoginView: View {
     
     private func authenticate() {
         self.isAuthenticated = true
+    }
+}
+
+struct LoginContentView: View {
+    @State private var selectedIndex: Int = 0
+    
+    var selectedItem: BottomBarItem {
+        bottomBarItemsWhenLogin[selectedIndex]
+    }
+    
+    var body: some View {
+        GeometryReader { geometry in
+            AppColour.cYellow.ignoresSafeArea()
+            
+            NavigationView {
+                VStack {
+                    switch selectedIndex {
+                    case 0:
+                        LoginView()
+                    case 1:
+                        GuestMenuView()
+                    default:
+                        EmptyView()
+                    }
+                    
+                    BottomBar(selectedIndex: $selectedIndex, items: bottomBarItems)
+                        .background(AppColour.cYellow)
+                        .padding(.horizontal, 60.0)
+                }
+                .background(AppColour.cYellow)
+            }
+            .navigationBarBackButtonHidden(true)
+        }
+        .background(AppColour.cYellow)
+        .navigationBarHidden(true)
     }
 }
 

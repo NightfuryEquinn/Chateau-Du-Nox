@@ -11,8 +11,8 @@ import BottomBar_SwiftUI
 let bottomBarItemsWhenLogin: [BottomBarItem] = [
     BottomBarItem(icon: "person.crop.circle", title: "Profile", color: AppColour.cLightGreen),
     BottomBarItem(icon: "house", title: "Main Menu", color: AppColour.cLightGreen),
-    BottomBarItem(icon: "shippingbox", title: "Crate", color: AppColour.cLightGreen),
-    BottomBarItem(icon: "cart", title: "Order", color: AppColour.cLightGreen)
+    BottomBarItem(icon: "shippingbox", title: "History", color: AppColour.cLightGreen),
+    BottomBarItem(icon: "cart", title: "Crate", color: AppColour.cLightGreen)
 ]
 
 struct MainMenuView: View {
@@ -26,44 +26,40 @@ struct MainMenuView: View {
     @State private var filteredWines = [Wine]()
     
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                AppColour.cYellow.ignoresSafeArea()
+        GeometryReader { geometry in
+            AppColour.cYellow.ignoresSafeArea()
+            
+            VStack {
+                Image("chateauLogo")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 10)
+                    .padding(.bottom, 75)
                 
-                VStack {
-                    Image("chateauLogo")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 10)
-                        .padding(.bottom, 75)
-                    
-                    SearchBarStruct(text: $searchText)
-                        .onChange(of: searchText) { searchText in
-                            if searchText.isEmpty {
-                                filteredWines = wines
-                            } else {
-                                filteredWines = wines.filter {
-                                    $0.name.lowercased().contains(searchText.lowercased())
-                                }
-                            }
-                        }
-                    
-                    ScrollView {
-                        LazyVStack(alignment: .leading) {
-                            ForEach(filteredWines, id:\.self) { wine in
-                                WineRowStruct(wine: wine)
+                SearchBarStruct(text: $searchText)
+                    .onChange(of: searchText) { searchText in
+                        if searchText.isEmpty {
+                            filteredWines = wines
+                        } else {
+                            filteredWines = wines.filter {
+                                $0.name.lowercased().contains(searchText.lowercased())
                             }
                         }
                     }
-                    .padding(.horizontal, 40)
+                
+                ScrollView {
+                    LazyVStack(alignment: .leading) {
+                        ForEach(filteredWines, id:\.self) { wine in
+                            WineRowStruct(wine: wine)
+                        }
+                    }
                 }
+                .padding(.horizontal, 35)
             }
-            .background(AppColour.cYellow)
-            
         }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarBackButtonHidden(true)
+        .background(AppColour.cYellow)
         .navigationBarHidden(true)
+        .padding(.top, 90.0)
         .onAppear {
             filterWines()
         }
@@ -100,9 +96,9 @@ struct MainMenuContentView: View {
                     case 1:
                         MainMenuView(item: bottomBarItemsWhenLogin[1])
                     case 2:
-                        CrateView()
+                        HistoryView()
                     case 3:
-                        OrderView()
+                        CrateView()
                     default:
                         EmptyView()
                     }
