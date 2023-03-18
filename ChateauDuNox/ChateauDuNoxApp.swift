@@ -15,7 +15,7 @@ struct ChateauDuNoxApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AddressView()
+            MainMenuContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(locationManager)
         }

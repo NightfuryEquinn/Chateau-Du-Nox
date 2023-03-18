@@ -15,6 +15,10 @@ struct AddressView: View {
     @State private var address = ""
     @State private var coordinate = CLLocationCoordinate2D()
     
+    // Binding Variables
+    @Binding var showAddressView: Bool
+    @Binding var showPaymentView: Bool
+    
     var body: some View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
@@ -33,6 +37,9 @@ struct AddressView: View {
                         print("Confirm Address")
                         
                         updateCoordinate()
+                        
+                        showAddressView = false
+                        showPaymentView = false
                     }) {
                         Text("Confirm Address")
                             .font(.custom("Didot", size: 20))
@@ -71,6 +78,6 @@ struct AddressView: View {
 
 struct AddressView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressView().environmentObject(LocationManager())
+        AddressView(showAddressView: .constant(false), showPaymentView: .constant(false)).environmentObject(LocationManager())
     }
 }

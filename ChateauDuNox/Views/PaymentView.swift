@@ -20,6 +20,8 @@ struct PaymentView: View {
     
     @State private var cardHolderName = ""
     
+    @State private var showAddressView = false
+    
     // Binding Variables
     @Binding var showPaymentView: Bool
     
@@ -120,11 +122,11 @@ struct PaymentView: View {
                     Button(action: {
                         if isCardNumberValid && isCVVValid && isExpirationDateValid {
                             print("Proceed")
+                            
+                            self.showAddressView = true
                         } else {
                             print("Empty or error fields")
                         }
-                        
-                        showPaymentView = false
                     }) {
                         Text("Proceed")
                             .font(.custom("Didot", size: 20))
@@ -138,6 +140,9 @@ struct PaymentView: View {
                     .padding(.horizontal, 120)
                     .padding(.bottom, 40)
                     .disabled(!isCardNumberValid || !isCVVValid || !isExpirationDateValid)
+                    .sheet(isPresented: $showAddressView) {
+                        AddressView(showAddressView: $showAddressView, showPaymentView: $showPaymentView)
+                    }
                 }
             }
             .edgesIgnoringSafeArea(.all)
