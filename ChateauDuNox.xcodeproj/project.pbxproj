@@ -31,6 +31,9 @@
 		6499706629C5696E0091E541 /* HistoryItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706529C5696E0091E541 /* HistoryItemStruct.swift */; };
 		6499706829C56A590091E541 /* HistoryRowStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706729C56A590091E541 /* HistoryRowStruct.swift */; };
 		6499706A29C576000091E541 /* ReceivedPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706929C576000091E541 /* ReceivedPopView.swift */; };
+		6499706C29C585D50091E541 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706B29C585D50091E541 /* AddressView.swift */; };
+		6499707029C58BE60091E541 /* AddressMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706F29C58BE60091E541 /* AddressMap.swift */; };
+		6499707329C58E950091E541 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499707229C58E950091E541 /* LocationManager.swift */; };
 		64A80A1229C04E190055E91B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1129C04E190055E91B /* ProfileView.swift */; };
 		64A80A1429C04E2B0055E91B /* CrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1329C04E2B0055E91B /* CrateView.swift */; };
 		64A80A1629C04E420055E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1529C04E420055E91B /* HistoryView.swift */; };
@@ -82,6 +85,9 @@
 		6499706529C5696E0091E541 /* HistoryItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemStruct.swift; sourceTree = "<group>"; };
 		6499706729C56A590091E541 /* HistoryRowStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowStruct.swift; sourceTree = "<group>"; };
 		6499706929C576000091E541 /* ReceivedPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedPopView.swift; sourceTree = "<group>"; };
+		6499706B29C585D50091E541 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		6499706F29C58BE60091E541 /* AddressMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMap.swift; sourceTree = "<group>"; };
+		6499707229C58E950091E541 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		64A80A1129C04E190055E91B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		64A80A1329C04E2B0055E91B /* CrateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateView.swift; sourceTree = "<group>"; };
 		64A80A1529C04E420055E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 				64CD64A129C18EE200C06DDC /* Styles */,
 				64652D4629BEBB0100D576C7 /* Backend */,
 				647EF5CA29BC2250002A9897 /* Views */,
+				6499707129C58BEB0091E541 /* Map */,
 				647EF5AB29BC1D6C002A9897 /* ChateauDuNoxApp.swift */,
 				647EF5C429BC2045002A9897 /* PersistenceController.swift */,
 			);
@@ -196,6 +203,7 @@
 				64CD649929C18D7200C06DDC /* UpdateProfileView.swift */,
 				6423BD9729C2A1CB003F044D /* PaymentView.swift */,
 				6499706929C576000091E541 /* ReceivedPopView.swift */,
+				6499706B29C585D50091E541 /* AddressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +231,15 @@
 				647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		6499707129C58BEB0091E541 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6499706F29C58BE60091E541 /* AddressMap.swift */,
+				6499707229C58E950091E541 /* LocationManager.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		64CD649629C1896B00C06DDC /* Struct */ = {
@@ -342,6 +359,7 @@
 			files = (
 				64A80A1429C04E2B0055E91B /* CrateView.swift in Sources */,
 				64A80A1629C04E420055E91B /* HistoryView.swift in Sources */,
+				6499707329C58E950091E541 /* LocationManager.swift in Sources */,
 				647805CF29BF0F8000018916 /* MainMenuView.swift in Sources */,
 				64E4690629BFF68600874300 /* WineDetailsView.swift in Sources */,
 				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
@@ -351,6 +369,7 @@
 				64CD649529C1896700C06DDC /* SearchBarStruct.swift in Sources */,
 				64CD64A529C193C600C06DDC /* FormatChecker.swift in Sources */,
 				64CD649A29C18D7200C06DDC /* UpdateProfileView.swift in Sources */,
+				6499707029C58BE60091E541 /* AddressMap.swift in Sources */,
 				64CD64A329C18F0600C06DDC /* AppColour.swift in Sources */,
 				64CD649829C18ABB00C06DDC /* WineRowStruct.swift in Sources */,
 				64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */,
@@ -361,6 +380,7 @@
 				647805D429BF1D4E00018916 /* Wine.swift in Sources */,
 				647EF5D229BC349F002A9897 /* LoginView.swift in Sources */,
 				647EF5C929BC2247002A9897 /* SignupView.swift in Sources */,
+				6499706C29C585D50091E541 /* AddressView.swift in Sources */,
 				64CD64AB29C1B6EB00C06DDC /* CartRowStruct.swift in Sources */,
 				6499706629C5696E0091E541 /* HistoryItemStruct.swift in Sources */,
 				64A80A1229C04E190055E91B /* ProfileView.swift in Sources */,
@@ -500,6 +520,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChateauDuNox/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -529,6 +552,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChateauDuNox/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

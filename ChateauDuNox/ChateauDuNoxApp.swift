@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct ChateauDuNoxApp: App {
     let persistenceController = PersistenceController.shared
+    
+    @StateObject var locationManager = LocationManager()
 
     var body: some Scene {
         WindowGroup {
-            MainMenuContentView()
+            AddressView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(locationManager)
         }
     }
 }
