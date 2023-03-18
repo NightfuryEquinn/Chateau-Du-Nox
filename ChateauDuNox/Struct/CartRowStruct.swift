@@ -35,10 +35,14 @@ struct CartRowStruct: View {
                         .foregroundColor(AppColour.cYellow)
                     
                     HStack(alignment: .center) {
-                        Stepper("\(cartItem.quantity)", value: $cartItem.quantity, in: 1...12)
-                            .foregroundColor(AppColour.cYellow)
+                        Stepper("\t\(cartItem.quantity)", value: $cartItem.quantity, in: 1...12)
+                            .font(.custom("Avenir Next Medium", size: 16))
+                            .foregroundColor(AppColour.cDarkGreen)
+                            .background(AppColour.cYellow)
+                            .cornerRadius(10.0)
                     }
-                    .padding(10)
+                    .padding(.vertical, 10.0)
+                    .padding(.trailing, 10.0)
                     
                     Button(action: {
                         print("Remove")
