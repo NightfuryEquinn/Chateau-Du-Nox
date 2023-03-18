@@ -34,6 +34,7 @@
 		6499706C29C585D50091E541 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706B29C585D50091E541 /* AddressView.swift */; };
 		6499707029C58BE60091E541 /* AddressMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706F29C58BE60091E541 /* AddressMap.swift */; };
 		6499707329C58E950091E541 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499707229C58E950091E541 /* LocationManager.swift */; };
+		6499707529C5A6AD0091E541 /* AddToCartPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499707429C5A6AD0091E541 /* AddToCartPopView.swift */; };
 		64A80A1229C04E190055E91B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1129C04E190055E91B /* ProfileView.swift */; };
 		64A80A1429C04E2B0055E91B /* CrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1329C04E2B0055E91B /* CrateView.swift */; };
 		64A80A1629C04E420055E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A80A1529C04E420055E91B /* HistoryView.swift */; };
@@ -88,6 +89,7 @@
 		6499706B29C585D50091E541 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		6499706F29C58BE60091E541 /* AddressMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMap.swift; sourceTree = "<group>"; };
 		6499707229C58E950091E541 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6499707429C5A6AD0091E541 /* AddToCartPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartPopView.swift; sourceTree = "<group>"; };
 		64A80A1129C04E190055E91B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		64A80A1329C04E2B0055E91B /* CrateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateView.swift; sourceTree = "<group>"; };
 		64A80A1529C04E420055E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				6423BD9729C2A1CB003F044D /* PaymentView.swift */,
 				6499706929C576000091E541 /* ReceivedPopView.swift */,
 				6499706B29C585D50091E541 /* AddressView.swift */,
+				6499707429C5A6AD0091E541 /* AddToCartPopView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				64CD64A329C18F0600C06DDC /* AppColour.swift in Sources */,
 				64CD649829C18ABB00C06DDC /* WineRowStruct.swift in Sources */,
 				64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */,
+				6499707529C5A6AD0091E541 /* AddToCartPopView.swift in Sources */,
 				6423BD9829C2A1CB003F044D /* PaymentView.swift in Sources */,
 				647EF5AC29BC1D6C002A9897 /* ChateauDuNoxApp.swift in Sources */,
 				647805D129BF1C6D00018916 /* WineData.swift in Sources */,

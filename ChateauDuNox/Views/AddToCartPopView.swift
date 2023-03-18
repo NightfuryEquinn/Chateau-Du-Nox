@@ -1,5 +1,5 @@
 //
-//  ReceivedPopView.swift
+//  AddToCartPopView.swift
 //  ChateauDuNox
 //
 //  Created by YIP ZI XIAN on 18/03/2023.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ReceivedPopView: View {
+struct AddToCartPopView: View {
     // Binding Variables
-    @Binding var showReceivedPopView: Bool
+    @Binding var showAddToCartView: Bool
     
     var body: some View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
             
             VStack(alignment: .center) {
-                Text("Please ensure that you received your order.\nConfirm received?\n\nThis action can't be undone.")
+                Text("Are you sure to add this wine to your cart?\nYou can check your cart to increase or decrease the quantity you wished to purchase.")
                     .font(.custom("Avenir Next Medium", size: 22))
                     .foregroundColor(AppColour.cBlack)
                     .fixedSize(horizontal: false, vertical: true)
@@ -26,7 +26,7 @@ struct ReceivedPopView: View {
                 Button(action: {
                     print("Confirm")
                     
-                    showReceivedPopView = false
+                    showAddToCartView = false
                 }) {
                     Text("Confirm")
                         .font(.custom("Avenir Next", size: 18))
@@ -45,8 +45,8 @@ struct ReceivedPopView: View {
     }
 }
 
-struct ReceivedPopView_Previews: PreviewProvider {
+struct AddToCartPopView_Previews: PreviewProvider {
     static var previews: some View {
-        ReceivedPopView(showReceivedPopView: .constant(false))
+        AddToCartPopView(showAddToCartView: .constant(false))
     }
 }

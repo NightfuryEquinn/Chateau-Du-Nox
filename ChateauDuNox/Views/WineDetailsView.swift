@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct WineDetailsView: View {
+    // State Variables
+    @State var showAddToCartView = false
+    
     let wine: Wine
     
     var body: some View {
@@ -102,6 +105,8 @@ struct WineDetailsView: View {
                     
                     Button(action: {
                         print("Add to Cart")
+                        
+                        self.showAddToCartView = true
                     }) {
                         HStack {
                             Spacer()
@@ -118,6 +123,9 @@ struct WineDetailsView: View {
                     .padding(.vertical, 40)
                     .padding(.leading, 200)
                     .padding(.trailing, 35)
+                    .sheet(isPresented: $showAddToCartView) {
+                        AddToCartPopView(showAddToCartView:  $showAddToCartView)
+                    }
                 }
             }
         }

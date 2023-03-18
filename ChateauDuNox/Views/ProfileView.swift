@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     // State Variables
     @State var showUpdateProfileView = false
+    @State var isLogout = false
     
     var body: some View {
         ScrollView {
@@ -84,13 +85,32 @@ struct ProfileView: View {
                 }
                 .padding(.horizontal, 35)
                 
-                Button(action: {
-                    print("Edit")
+                HStack(alignment: .center, spacing: 40.0) {
+                    Button(action: {
+                        print("Logout")
+                        
+                        self.isLogout = true
+                    }) {
+                        Text("Logout")
+                            .font(.custom("Didot", size: 16))
+                            .bold()
+                            .foregroundColor(AppColour.cYellow)
+                            .padding(5)
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .background(AppColour.cLightGreen)
+                            .cornerRadius(50)
+                    }
+                    .background(
+                        NavigationLink(destination: LoginContentView(), isActive: $isLogout) {
+                            EmptyView()
+                        }
+                    )
                     
-                    self.showUpdateProfileView = true
-                }) {
-                    HStack {
-                        Spacer()
+                    Button(action: {
+                        print("Edit")
+                        
+                        self.showUpdateProfileView = true
+                    }) {
                         Text("Edit")
                             .font(.custom("Didot", size: 16))
                             .bold()
@@ -100,13 +120,12 @@ struct ProfileView: View {
                             .background(AppColour.cLightGreen)
                             .cornerRadius(50)
                     }
+                    .padding(.vertical, 20)
+                    .sheet(isPresented: $showUpdateProfileView) {
+                        UpdateProfileView(showUpdateProfileView: $showUpdateProfileView)
+                    }
                 }
-                .padding(.vertical, 20)
-                .padding(.leading, 250)
-                .padding(.trailing, 35)
-                .sheet(isPresented: $showUpdateProfileView) {
-                    UpdateProfileView(showUpdateProfileView: $showUpdateProfileView)
-                }
+                .padding(.horizontal, 35.0)
             }
         }
         .edgesIgnoringSafeArea(.all)
