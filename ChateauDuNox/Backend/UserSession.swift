@@ -8,7 +8,7 @@
 import CoreData
 import SwiftUI
 
-func createUserSession(username: String, password: String) -> String? {
+func createUserSession(username: String, password: String) {
     // Get a Reference to the Core Data persistent container
     let container = NSPersistentContainer(name: "ChateauDB")
     
@@ -30,27 +30,32 @@ func createUserSession(username: String, password: String) -> String? {
         
         // If there is at least one user that matches, set the user ID and return it
         if let user = matchingUsers.first {
-            UserDefaults.standard.set(user.name, forKey: "userID")
+            UserDefaults.standard.set(user.name, forKey: "userSessionName")
+            UserDefaults.standard.set(user.password, forKey: "userSessionPassword")
+            UserDefaults.standard.set(user.email, forKey: "userSessionEmail")
+            UserDefaults.standard.set(user.contact, forKey: "userSessionContact")
+            UserDefaults.standard.set(user.address, forKey: "userSessionAddress")
             
-            userID = user.name
-            
-            return user.name
-        } else {
-            // If no matching user was found, return nil
-            return nil
+            userSessionName = user.name
+            userSessionPassword = user.password
+            userSessionEmail = user.email
+            userSessionContact = user.contact
+            userSessionAddress = user.address
+    
         }
     } catch {
         // Handle errors with fetching from CoreData
         print("Error fetching from Core Data: \(error.localizedDescription)")
-    
-        return nil
     }
 }
 
 func obliterateUserSession() {
     // Remove the stored authentication status and user identifier from UserDefaults
-    UserDefaults.standard.removeObject(forKey: "isAuthenticated")
-    UserDefaults.standard.removeObject(forKey: "userID")
+    UserDefaults.standard.removeObject(forKey: "userSessionName")
+    UserDefaults.standard.removeObject(forKey: "userSessionPassword")
+    UserDefaults.standard.removeObject(forKey: "userSessionEmail")
+    UserDefaults.standard.removeObject(forKey: "userSessionContact")
+    UserDefaults.standard.removeObject(forKey: "userSessionAddress")
     
     // Synchronize UserDefaults to persist the changes
     UserDefaults.standard.synchronize()

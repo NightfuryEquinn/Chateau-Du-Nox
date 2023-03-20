@@ -37,7 +37,7 @@ struct ProfileView: View {
                     .padding(.bottom, 20)
                     .aspectRatio(contentMode: .fill)
                 
-                Text(userID ?? "Unknown")
+                Text(userSessionName ?? "Unknown")
                     .font(.custom("Didot", size: 32))
                     .bold()
                     .foregroundColor(AppColour.cBlack)
@@ -50,7 +50,7 @@ struct ProfileView: View {
                             .foregroundColor(AppColour.cBlack)
                             .bold()
                         
-                        Text("yelan@gmail.com")
+                        Text(userSessionEmail ?? "unknown@gmail.com")
                             .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(AppColour.cBlack)
                             .multilineTextAlignment(.center)
@@ -63,7 +63,7 @@ struct ProfileView: View {
                             .foregroundColor(AppColour.cBlack)
                             .bold()
                         
-                        Text("0126553221")
+                        Text(userSessionContact ?? "012xxx1122")
                             .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(AppColour.cBlack)
                             .multilineTextAlignment(.center)
@@ -76,7 +76,7 @@ struct ProfileView: View {
                             .foregroundColor(AppColour.cBlack)
                             .bold()
                         
-                        Text("62, Jalan Liyue, Taman Teyvat, Genshin 98002, Hoyoverse")
+                        Text(userSessionAddress ?? "0, Jalan Unknown, Taman Unknown, 00000 Unknown, Unknown Country")
                             .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(AppColour.cBlack)
                             .multilineTextAlignment(.center)
@@ -90,7 +90,6 @@ struct ProfileView: View {
                         print("Logout")
                         
                         obliterateUserSession()
-                        userID = UserDefaults.standard.string(forKey: "userID")
                         
                         self.isLogout = true
                     }) {

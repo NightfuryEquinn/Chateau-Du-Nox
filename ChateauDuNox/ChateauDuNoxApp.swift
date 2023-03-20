@@ -8,7 +8,11 @@
 import SwiftUI
 
 // Declare a global variable to store the user ID
-var userID: String? = UserDefaults.standard.string(forKey: "userID")
+var userSessionName: String? = UserDefaults.standard.string(forKey: "userSessionName")
+var userSessionPassword: String? = UserDefaults.standard.string(forKey: "userSessionPassword")
+var userSessionEmail: String? = UserDefaults.standard.string(forKey: "userSessionEmail")
+var userSessionContact: String? = UserDefaults.standard.string(forKey: "userSessionContact")
+var userSessionAddress: String? = UserDefaults.standard.string(forKey: "userSessionAddress")
 
 @main
 struct ChateauDuNoxApp: App {

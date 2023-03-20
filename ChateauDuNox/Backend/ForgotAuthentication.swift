@@ -10,7 +10,7 @@ import CoreData
 func forgotAuthentication(email: String, newPassword: String) {
     let container = NSPersistentContainer(name: "ChateauDB")
     
-    container.loadPersistentStores { (storeDescription, error ) in
+    container.loadPersistentStores { ( storeDescription, error ) in
         if let error = error as NSError? {
             fatalError("Unresolved error \(error), \(error.userInfo)")
         }

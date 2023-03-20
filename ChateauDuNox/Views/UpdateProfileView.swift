@@ -9,10 +9,10 @@ import SwiftUI
 
 struct UpdateProfileView: View {
     // State Variables
-    @State private var editPassword = ""
-    @State private var editEmail = ""
-    @State private var editContact = ""
-    @State private var editAddress = ""
+    @State private var editPassword = UserDefaults.standard.string(forKey: "userSessionPassword") ?? ""
+    @State private var editEmail = UserDefaults.standard.string(forKey: "userSessionEmail") ?? ""
+    @State private var editContact = UserDefaults.standard.string(forKey: "userSessionContact") ?? ""
+    @State private var editAddress = UserDefaults.standard.string(forKey: "userSessionAddress") ?? ""
     
     // Binding Variables
     @Binding var showUpdateProfileView: Bool
@@ -78,6 +78,10 @@ struct UpdateProfileView: View {
                     if isValidEmail(email: editEmail) {
                         if isValidContact(contact: editContact) {
                             print("Edited and Updated")
+                            
+                            updateUserInfo(password: editPassword, email: editEmail, contact: editContact, address: editAddress)
+                            
+                            showUpdateProfileView = false
                         } else {
                             print("Invalid contact")
                         }
