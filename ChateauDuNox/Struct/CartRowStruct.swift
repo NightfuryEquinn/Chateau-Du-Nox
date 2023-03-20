@@ -46,6 +46,8 @@ struct CartRowStruct: View {
                     
                     Button(action: {
                         print("Remove")
+                        
+                        deleteWineFromCart(wine: cartItem.name)
                     }) {
                         HStack {
                             Spacer()

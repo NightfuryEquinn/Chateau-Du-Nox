@@ -111,6 +111,14 @@ struct WineDetailsView: View {
                             print("Add to Cart")
                             
                             self.showAddToCartView = true
+                            
+                            addWineToCart(
+                                customer: userSessionName ?? "",
+                                wine: wine.name,
+                                bottleImage: wine.bottleImage,
+                                price: wine.price,
+                                quantity: 1
+                            )
                         }) {
                             HStack {
                                 Spacer()
@@ -127,9 +135,6 @@ struct WineDetailsView: View {
                         .padding(.vertical, 40)
                         .padding(.leading, 200)
                         .padding(.trailing, 35)
-                        .sheet(isPresented: $showAddToCartView) {
-                            AddToCartPopView(showAddToCartView:  $showAddToCartView)
-                        }
                     }
                 }
             }
