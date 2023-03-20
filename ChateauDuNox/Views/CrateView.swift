@@ -21,21 +21,21 @@ struct CrateView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Image("barrel-cover")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 250)
-                    .edgesIgnoringSafeArea(.all)
-                    .padding(.bottom, 30)
-                
-                Text("My Crate")
-                    .font(.custom("Didot", size: 44))
-                    .bold()
-                    .foregroundColor(AppColour.cBlack)
-                    .padding(.bottom, 15)
-                
+        VStack {
+            Image("barrel-cover")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 250)
+                .edgesIgnoringSafeArea(.all)
+                .padding(.bottom, 30)
+            
+            Text("My Crate")
+                .font(.custom("Didot", size: 44))
+                .bold()
+                .foregroundColor(AppColour.cBlack)
+                .padding(.bottom, 15)
+        
+            ScrollView {
                 if !items.isEmpty {
                     LazyVStack {
                         ForEach(items.indices, id: \.self) { index in

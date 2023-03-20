@@ -20,21 +20,22 @@ struct WineDetailsView: View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
             
+            VStack {
+                Image(wine.coverImage)
+                    .resizable()
+                    .scaledToFit()
+                    .edgesIgnoringSafeArea(.all)
+                    .padding(.bottom, 20)
+                
+                Text(wine.name)
+                    .font(.custom("Didot", size: 44))
+                    .bold()
+                    .foregroundColor(AppColour.cBlack)
+                    .padding(.horizontal, 35)
+                    .padding(.bottom, 20)
+            
+            
             ScrollView {
-                VStack {
-                    Image(wine.coverImage)
-                        .resizable()
-                        .scaledToFit()
-                        .edgesIgnoringSafeArea(.all)
-                        .padding(.bottom, 20)
-                    
-                    Text(wine.name)
-                        .font(.custom("Didot", size: 44))
-                        .bold()
-                        .foregroundColor(AppColour.cBlack)
-                        .padding(.horizontal, 35)
-                        .padding(.bottom, 40)
-                    
                     Image(wine.bottleImage)
                         .resizable()
                         .frame(width: 125.0, height: 375.0)

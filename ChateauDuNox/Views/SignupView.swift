@@ -33,20 +33,20 @@ struct SignupView: View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
             
-            ScrollView {
-                VStack {
-                    Image("barbera-cover")
-                        .resizable()
-                        .scaledToFit()
-                        .edgesIgnoringSafeArea(.all)
-                        .padding(.bottom, 20)
-                    
-                    Text("New Oenophile")
-                        .font(.custom("Didot", size: 36))
-                        .bold()
-                        .foregroundColor(AppColour.cBlack)
-                        .padding(.bottom, 60)
-                    
+            VStack {
+                Image("barbera-cover")
+                    .resizable()
+                    .scaledToFit()
+                    .edgesIgnoringSafeArea(.all)
+                    .padding(.bottom, 20)
+                
+                Text("New Oenophile")
+                    .font(.custom("Didot", size: 36))
+                    .bold()
+                    .foregroundColor(AppColour.cBlack)
+                    .padding(.bottom, 30)
+
+                ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         // Username
                         Text("Username")

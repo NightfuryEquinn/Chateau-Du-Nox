@@ -11,11 +11,7 @@ struct HistoryView: View {
     // State Variables
     @State private var filterDate = Date()
     
-    @State var items: [HistoryItemStruct] = [
-        HistoryItemStruct(name: "Barbera", customer: "New", bottleImage: "barbera-bottle", orderedDate: Date(), deliveredDate: Date(), address: "29, Jalan King, Taman Queen, 31650 Ipoh, Perak", quantity: 3, totalPrice: 568.38),
-        HistoryItemStruct(name: "Sauvignon Blanc", customer: "New", bottleImage: "blanc-bottle", orderedDate: Date().addingTimeInterval(60 * 60 * 24), deliveredDate: nil, address: "29, Jalan King, Taman Queen, 31650 Ipoh, Perak", quantity: 5, totalPrice: 968.38),
-        HistoryItemStruct(name: "Pinot Noir", customer: "New", bottleImage: "pinot-noir-bottle", orderedDate: Date().addingTimeInterval(60 * 60 * 24), deliveredDate: nil, address: "29, Jalan King, Taman Queen, 31650 Ipoh, Perak", quantity: 2, totalPrice: 268.38)
-    ]
+    @State var items: [HistoryItemStruct] = []
     
     var filteredHistory: [Binding<HistoryItemStruct>] {
         items.indices.filter { index in
@@ -47,20 +43,33 @@ struct HistoryView: View {
                 .font(.custom("Avenir Next", size: 16))
             
             ScrollView {
-                LazyVStack {
-                    ForEach(filteredHistory.indices, id: \.self) { index in
-                        HistoryRowStruct(historyItem: filteredHistory[index]).id(index)
-                        
-                        if index != filteredHistory.indices.last {
-                            Divider()
-                                .background(AppColour.cBlack)
-                                .padding(.horizontal, 35.0)
+                if !filteredHistory.isEmpty {
+                    LazyVStack {
+                        ForEach(filteredHistory.indices, id: \.self) { index in
+                            HistoryRowStruct(historyItem: filteredHistory[index]).id(index)
+                            
+                            if index != filteredHistory.indices.last {
+                                Divider()
+                                    .background(AppColour.cBlack)
+                                    .padding(.horizontal, 35.0)
+                            }
                         }
                     }
+                    .background(AppColour.cDarkGreen)
+                    .cornerRadius(10)
+                    .padding(30.0)
+                } else {
+                    VStack(alignment: .center, spacing: 20.0) {
+                        Image(systemName: "clock.arrow.circlepath")
+                            .font(.largeTitle)
+                            .foregroundColor(AppColour.cDarkGreen)
+                        
+                        Text("There is no order on this day.")
+                            .font(.custom("Didot", size: 24))
+                            .bold()
+                    }
+                    .padding(.top, 110.0)
                 }
-                .background(AppColour.cDarkGreen)
-                .cornerRadius(10)
-                .padding(30.0)
             }
         }
     }

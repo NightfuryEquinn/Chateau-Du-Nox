@@ -35,7 +35,6 @@
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
 		6499706629C5696E0091E541 /* HistoryItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706529C5696E0091E541 /* HistoryItemStruct.swift */; };
 		6499706829C56A590091E541 /* HistoryRowStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706729C56A590091E541 /* HistoryRowStruct.swift */; };
-		6499706A29C576000091E541 /* ReceivedPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706929C576000091E541 /* ReceivedPopView.swift */; };
 		6499706C29C585D50091E541 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706B29C585D50091E541 /* AddressView.swift */; };
 		6499707029C58BE60091E541 /* AddressMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706F29C58BE60091E541 /* AddressMap.swift */; };
 		6499707329C58E950091E541 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499707229C58E950091E541 /* LocationManager.swift */; };
@@ -94,7 +93,6 @@
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
 		6499706529C5696E0091E541 /* HistoryItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemStruct.swift; sourceTree = "<group>"; };
 		6499706729C56A590091E541 /* HistoryRowStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowStruct.swift; sourceTree = "<group>"; };
-		6499706929C576000091E541 /* ReceivedPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedPopView.swift; sourceTree = "<group>"; };
 		6499706B29C585D50091E541 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		6499706F29C58BE60091E541 /* AddressMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMap.swift; sourceTree = "<group>"; };
 		6499707229C58E950091E541 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -217,7 +215,6 @@
 				64E4690529BFF68600874300 /* WineDetailsView.swift */,
 				64CD649929C18D7200C06DDC /* UpdateProfileView.swift */,
 				6423BD9729C2A1CB003F044D /* PaymentView.swift */,
-				6499706929C576000091E541 /* ReceivedPopView.swift */,
 				6499706B29C585D50091E541 /* AddressView.swift */,
 			);
 			path = Views;
@@ -403,7 +400,6 @@
 				6499706629C5696E0091E541 /* HistoryItemStruct.swift in Sources */,
 				64A80A1229C04E190055E91B /* ProfileView.swift in Sources */,
 				64681B4129C8093500BE7944 /* UpdateUserInfo.swift in Sources */,
-				6499706A29C576000091E541 /* ReceivedPopView.swift in Sources */,
 				64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */,
 				6423BD9629C292B3003F044D /* CartItemStruct.swift in Sources */,
 				64681B4729C835C300BE7944 /* DeleteWineFromCart.swift in Sources */,

@@ -9,9 +9,6 @@ import Foundation
 import SwiftUI
 
 struct HistoryRowStruct: View {
-    // State Variables
-    @State var showReceivedPopView = false
-    
     // Binding Variables
     @Binding var historyItem: HistoryItemStruct
     
@@ -69,8 +66,6 @@ struct HistoryRowStruct: View {
             } else {
                 Button(action: {
                     print("Received")
-                    
-                    self.showReceivedPopView = true
                 }) {
                     HStack {
                         Text("Received?")
@@ -86,9 +81,6 @@ struct HistoryRowStruct: View {
                 }
                 .padding(.vertical, 20.0)
                 .padding(.trailing, 80.0)
-                .sheet(isPresented: $showReceivedPopView) {
-                    ReceivedPopView(showReceivedPopView: $showReceivedPopView)
-                }
             }
         }
         .padding(.horizontal, 35)

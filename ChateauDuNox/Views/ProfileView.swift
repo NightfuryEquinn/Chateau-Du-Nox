@@ -16,21 +16,21 @@ struct ProfileView: View {
     @Binding var isLogin: Bool
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Image("vineyard-cover")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 250)
-                    .edgesIgnoringSafeArea(.all)
-                    .padding(.bottom, 30)
-                
-                Text("Profile")
-                    .font(.custom("Didot", size: 44))
-                    .bold()
-                    .foregroundColor(AppColour.cBlack)
-                    .padding(.bottom, 15)
-                
+        VStack {
+            Image("vineyard-cover")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 250)
+                .edgesIgnoringSafeArea(.all)
+                .padding(.bottom, 30)
+            
+            Text("Profile")
+                .font(.custom("Didot", size: 44))
+                .bold()
+                .foregroundColor(AppColour.cBlack)
+                .padding(.bottom, 15)
+            
+            ScrollView {
                 Image("pp-placeholder")
                     .resizable()
                     .scaledToFit()

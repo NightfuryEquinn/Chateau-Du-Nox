@@ -23,43 +23,46 @@ struct AddressView: View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
             
-            ScrollView {
-                VStack(alignment: .center) {
-                    Text("Address")
-                        .font(.custom("Avenir Next", size: 18))
-                        .foregroundColor(AppColour.cBlack)
+            VStack(alignment: .center) {
+                Text("Address")
+                    .font(.custom("Didot", size: 24))
+                    .foregroundColor(AppColour.cBlack)
+                
+                TextField("Enter address", text: $address)
+                    .font(.custom("Avenir Next", size: 18))
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                Button(action: {
+                    print("Confirm Address")
                     
-                    TextField("Enter address", text: $address)
-                        .font(.custom("Avenir Next", size: 18))
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    updateCoordinate()
                     
-                    Button(action: {
-                        print("Confirm Address")
-                        
-                        updateCoordinate()
-                        
-                        showAddressView = false
-                        showPaymentView = false
-                    }) {
-                        Text("Confirm Address")
-                            .font(.custom("Didot", size: 20))
-                            .bold()
-                            .foregroundColor(AppColour.cYellow)
-                            .padding(10)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(AppColour.cDarkGreen)
-                            .cornerRadius(50)
-                    }
-                    .padding(.horizontal, 60)
-                    .padding(.vertical, 20)
-                    
-                    AddressMap(address: $address, coordinate: coordinate)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 450.0)
-                        .cornerRadius(10.0)
+                    showAddressView = false
+                    showPaymentView = false
+                }) {
+                    Text("Confirm Address")
+                        .font(.custom("Didot", size: 20))
+                        .bold()
+                        .foregroundColor(AppColour.cYellow)
+                        .padding(10)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .background(AppColour.cDarkGreen)
+                        .cornerRadius(50)
                 }
+                .padding(.horizontal, 60)
+                .padding(.vertical, 20)
+                
+                AddressMap(address: $address, coordinate: coordinate)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 450.0)
+                    .cornerRadius(10.0)
+                    .padding(.bottom, 30.0)
+                
+                Text("NOTE: Ensure that your address is correctly typed. Inaccurate or invalid address will not be tolerated.\nPlease contact our customer service as soon as possible if your address is wrongly inputted.")
+                    .font(.custom("Avenir Next", size: 14))
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.horizontal, 35.0)
+            .padding(35.0)
         }
         .background(AppColour.cYellow)
     }
