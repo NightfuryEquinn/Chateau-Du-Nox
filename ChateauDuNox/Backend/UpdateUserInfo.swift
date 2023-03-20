@@ -29,7 +29,19 @@ func updateUserInfo(password: String, email: String, contact: String, address: S
             return
         }
         
+        // Update the changed information in CoreData
+        user.password = password
+        user.email = email
+        user.contact = contact
+        user.address = address
         
+        userSessionPassword = password
+        userSessionEmail = email
+        userSessionContact = contact
+        userSessionAddress = address
+        
+        // Save the updated information to CoreData
+        try container.viewContext.save()
         
     } catch {
         print("Error updating user called \(userSessionName ?? ""): \(error.localizedDescription)")
