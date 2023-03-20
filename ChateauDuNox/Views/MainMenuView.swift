@@ -24,7 +24,7 @@ struct MainMenuView: View {
     // State Variables
     @State private var searchText = ""
     @State private var filteredWines = [Wine]()
-    
+
     var body: some View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
@@ -40,6 +40,7 @@ struct MainMenuView: View {
                     .onChange(of: searchText) { searchText in
                         if searchText.isEmpty {
                             filteredWines = wines
+    
                         } else {
                             filteredWines = wines.filter {
                                 $0.name.lowercased().contains(searchText.lowercased())

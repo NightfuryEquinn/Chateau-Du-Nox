@@ -71,6 +71,8 @@ struct LoginView: View {
                 
                 if(userAuthentication(username: inUsername, password: inPassword)) {
                     self.authenticate()
+                    
+                    createUserSession(username: inUsername, password: inPassword)
                 }
             }) {
                 Text("Login")

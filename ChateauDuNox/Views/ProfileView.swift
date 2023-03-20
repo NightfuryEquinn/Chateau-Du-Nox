@@ -37,7 +37,7 @@ struct ProfileView: View {
                     .padding(.bottom, 20)
                     .aspectRatio(contentMode: .fill)
                 
-                Text("Yelan")
+                Text(userID ?? "Unknown")
                     .font(.custom("Didot", size: 32))
                     .bold()
                     .foregroundColor(AppColour.cBlack)
@@ -88,6 +88,9 @@ struct ProfileView: View {
                 HStack(alignment: .center, spacing: 40.0) {
                     Button(action: {
                         print("Logout")
+                        
+                        obliterateUserSession()
+                        userID = UserDefaults.standard.string(forKey: "userID")
                         
                         self.isLogout = true
                     }) {
