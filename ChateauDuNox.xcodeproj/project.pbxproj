@@ -15,6 +15,7 @@
 		64652D4529BEBAF900D576C7 /* ForgotAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */; };
 		64681B3F29C7E3B100BE7944 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64681B3E29C7E3B100BE7944 /* UserSession.swift */; };
 		64681B4129C8093500BE7944 /* UpdateUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64681B4029C8093500BE7944 /* UpdateUserInfo.swift */; };
+		64681B4329C81B0B00BE7944 /* AddWineToCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64681B4229C81B0B00BE7944 /* AddWineToCart.swift */; };
 		647805C929BEEE3E00018916 /* chateauLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 647805C829BEEE3E00018916 /* chateauLogo.png */; };
 		647805CB29BEF69500018916 /* pinot-noir-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 647805CA29BEF69500018916 /* pinot-noir-bottle.png */; };
 		647805CD29BF0EA800018916 /* GuestMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647805CC29BF0EA800018916 /* GuestMenuView.swift */; };
@@ -72,6 +73,7 @@
 		64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotAuthentication.swift; sourceTree = "<group>"; };
 		64681B3E29C7E3B100BE7944 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		64681B4029C8093500BE7944 /* UpdateUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfo.swift; sourceTree = "<group>"; };
+		64681B4229C81B0B00BE7944 /* AddWineToCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWineToCart.swift; sourceTree = "<group>"; };
 		647805C829BEEE3E00018916 /* chateauLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chateauLogo.png; sourceTree = "<group>"; };
 		647805CA29BEF69500018916 /* pinot-noir-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinot-noir-bottle.png"; sourceTree = "<group>"; };
 		647805CC29BF0EA800018916 /* GuestMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestMenuView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				64CD64A429C193C600C06DDC /* FormatChecker.swift */,
 				64681B3E29C7E3B100BE7944 /* UserSession.swift */,
 				64681B4029C8093500BE7944 /* UpdateUserInfo.swift */,
+				64681B4229C81B0B00BE7944 /* AddWineToCart.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				6499707329C58E950091E541 /* LocationManager.swift in Sources */,
 				647805CF29BF0F8000018916 /* MainMenuView.swift in Sources */,
 				64E4690629BFF68600874300 /* WineDetailsView.swift in Sources */,
+				64681B4329C81B0B00BE7944 /* AddWineToCart.swift in Sources */,
 				647EF5C529BC2045002A9897 /* PersistenceController.swift in Sources */,
 				647805CD29BF0EA800018916 /* GuestMenuView.swift in Sources */,
 				6499706829C56A590091E541 /* HistoryRowStruct.swift in Sources */,

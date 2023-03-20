@@ -11,6 +11,8 @@ struct WineRowStruct: View {
     // State Variables
     @State var showWineDetailsView = false
     
+    @Binding var isLogin: Bool
+    
     let wine: Wine
 
     var body: some View {
@@ -58,7 +60,7 @@ struct WineRowStruct: View {
                     .padding(.trailing, 100)
                     .padding(.vertical, 10)
                     .sheet(isPresented: $showWineDetailsView) {
-                        WineDetailsView(wine: wine)
+                        WineDetailsView(isLogin: $isLogin, wine: wine)
                     }
                 }
             }
@@ -80,6 +82,7 @@ struct WineRowStruct_Previews: PreviewProvider {
         )
         
         WineRowStruct(
+            isLogin: .constant(false),
             wine: Wine(
                 name: wine.name,
                 price: wine.price,

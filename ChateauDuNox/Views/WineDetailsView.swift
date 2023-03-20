@@ -11,6 +11,9 @@ struct WineDetailsView: View {
     // State Variables
     @State var showAddToCartView = false
     
+    // Binding Variables
+    @Binding var isLogin: Bool
+    
     let wine: Wine
     
     var body: some View {
@@ -103,28 +106,30 @@ struct WineDetailsView: View {
                     
                     Spacer()
                     
-                    Button(action: {
-                        print("Add to Cart")
-                        
-                        self.showAddToCartView = true
-                    }) {
-                        HStack {
-                            Spacer()
-                            Text("Add to Cart")
-                                .font(.custom("Didot", size: 16))
-                                .bold()
-                                .foregroundColor(AppColour.cYellow)
-                                .padding(5)
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .background(AppColour.cLightGreen)
-                                .cornerRadius(50)
+                    if isLogin {
+                        Button(action: {
+                            print("Add to Cart")
+                            
+                            self.showAddToCartView = true
+                        }) {
+                            HStack {
+                                Spacer()
+                                Text("Add to Cart")
+                                    .font(.custom("Didot", size: 16))
+                                    .bold()
+                                    .foregroundColor(AppColour.cYellow)
+                                    .padding(5)
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .background(AppColour.cLightGreen)
+                                    .cornerRadius(50)
+                            }
                         }
-                    }
-                    .padding(.vertical, 40)
-                    .padding(.leading, 200)
-                    .padding(.trailing, 35)
-                    .sheet(isPresented: $showAddToCartView) {
-                        AddToCartPopView(showAddToCartView:  $showAddToCartView)
+                        .padding(.vertical, 40)
+                        .padding(.leading, 200)
+                        .padding(.trailing, 35)
+                        .sheet(isPresented: $showAddToCartView) {
+                            AddToCartPopView(showAddToCartView:  $showAddToCartView)
+                        }
                     }
                 }
             }
@@ -147,6 +152,7 @@ struct WineDetailsView_Previews: PreviewProvider {
         )
         
         WineDetailsView(
+            isLogin: .constant(false),
             wine: Wine(
                 name: wine.name,
                 price: wine.price,

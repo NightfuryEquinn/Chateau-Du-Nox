@@ -15,7 +15,7 @@ let bottomBarItems: [BottomBarItem] = [
 ]
 
 struct LoginView: View {
-    // State Boolean
+    // State Variables
     @State var showSignupView = false
     @State var showForgotView = false
     
@@ -23,11 +23,12 @@ struct LoginView: View {
     @State var isGuestMenuViewActive = false
     
     @State var isAuthenticated = false
-    @State var isLogin = false
     
-    // State Variables
     @State private var inUsername = ""
     @State private var inPassword = ""
+    
+    // Binding Variables
+    @Binding var isLogin: Bool
     
     var body: some View {
         VStack {
@@ -74,6 +75,8 @@ struct LoginView: View {
                     
                     createUserSession(username: inUsername, password: inPassword)
                 }
+                
+                isLogin = true
             }) {
                 Text("Login")
                     .font(.custom("Didot", size: 20))
@@ -88,7 +91,7 @@ struct LoginView: View {
             .padding(.bottom, 20)
             .disabled(!self.canAuthenticate())
             .background(
-                NavigationLink(destination: MainMenuContentView(), isActive: self.$isAuthenticated) {
+                NavigationLink(destination: MainMenuContentView(isLogin: $isLogin), isActive: self.$isAuthenticated) {
                     EmptyView()
                 }
             )
@@ -133,7 +136,9 @@ struct LoginView: View {
 }
 
 struct LoginContentView: View {
+    // State Variables
     @State private var selectedIndex: Int = 0
+    @State var isLogin = false
     
     var selectedItem: BottomBarItem {
         bottomBarItemsWhenLogin[selectedIndex]
@@ -147,9 +152,9 @@ struct LoginContentView: View {
                 VStack {
                     switch selectedIndex {
                     case 0:
-                        LoginView()
+                        LoginView(isLogin: $isLogin)
                     case 1:
-                        GuestMenuView()
+                        GuestMenuView(isLogin: $isLogin)
                     default:
                         EmptyView()
                     }
@@ -169,6 +174,6 @@ struct LoginContentView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(isLogin: .constant(false))
     }
 }

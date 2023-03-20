@@ -12,6 +12,9 @@ struct ProfileView: View {
     @State var showUpdateProfileView = false
     @State var isLogout = false
     
+    // Binding Variables
+    @Binding var isLogin: Bool
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -91,6 +94,7 @@ struct ProfileView: View {
                         
                         obliterateUserSession()
                         
+                        isLogin = false
                         self.isLogout = true
                     }) {
                         Text("Logout")
@@ -103,7 +107,7 @@ struct ProfileView: View {
                             .cornerRadius(50)
                     }
                     .background(
-                        NavigationLink(destination: LoginContentView(), isActive: $isLogout) {
+                        NavigationLink(destination: LoginContentView(isLogin: isLogin), isActive: $isLogout) {
                             EmptyView()
                         }
                     )
@@ -137,6 +141,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(isLogin: .constant(false))
     }
 }

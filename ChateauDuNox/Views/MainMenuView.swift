@@ -24,6 +24,9 @@ struct MainMenuView: View {
     // State Variables
     @State private var searchText = ""
     @State private var filteredWines = [Wine]()
+    
+    // Binding Variables
+    @Binding var isLogin: Bool
 
     var body: some View {
         GeometryReader { geometry in
@@ -51,7 +54,7 @@ struct MainMenuView: View {
                 ScrollView {
                     LazyVStack(alignment: .leading) {
                         ForEach(filteredWines, id:\.self) { wine in
-                            WineRowStruct(wine: wine)
+                            WineRowStruct(isLogin: $isLogin, wine: wine)
                         }
                     }
                 }
@@ -79,7 +82,11 @@ struct MainMenuView: View {
 }
 
 struct MainMenuContentView: View {
+    // State Variables
     @State private var selectedIndex: Int = 0
+    
+    // Binding Variables
+    @Binding var isLogin: Bool
     
     var selectedItem: BottomBarItem {
         bottomBarItemsWhenLogin[selectedIndex]
@@ -93,9 +100,9 @@ struct MainMenuContentView: View {
                 VStack {
                     switch selectedIndex {
                     case 0:
-                        ProfileView()
+                        ProfileView(isLogin: $isLogin)
                     case 1:
-                        MainMenuView(item: bottomBarItemsWhenLogin[1])
+                        MainMenuView(item: bottomBarItemsWhenLogin[1], isLogin: $isLogin)
                     case 2:
                         HistoryView()
                     case 3:
@@ -118,6 +125,6 @@ struct MainMenuContentView: View {
 
 struct MainMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMenuView(item: bottomBarItemsWhenLogin[1])
+        MainMenuView(item: bottomBarItemsWhenLogin[1], isLogin: .constant(false))
     }
 }

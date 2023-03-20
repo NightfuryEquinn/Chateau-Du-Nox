@@ -16,6 +16,9 @@ struct GuestMenuView: View {
     @State private var searchText = ""
     @State private var filteredWines = [Wine]()
     
+    // Binding Variables
+    @Binding var isLogin: Bool
+    
     var body: some View {
             VStack {
                 Image("chateauLogo")
@@ -38,7 +41,7 @@ struct GuestMenuView: View {
                 ScrollView {
                     LazyVStack(alignment: .leading) {
                         ForEach(filteredWines, id:\.self) { wine in
-                            WineRowStruct(wine: wine)
+                            WineRowStruct(isLogin: $isLogin, wine: wine)
                         }
                     }
                 }
@@ -65,6 +68,6 @@ struct GuestMenuView: View {
 
 struct GuestMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        GuestMenuView()
+        GuestMenuView(isLogin: .constant(false))
     }
 }

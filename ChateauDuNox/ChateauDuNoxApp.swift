@@ -18,6 +18,7 @@ var userSessionAddress: String? = UserDefaults.standard.string(forKey: "userSess
 struct ChateauDuNoxApp: App {
     let persistenceController = PersistenceController.shared
     
+    // State Object Variables
     @StateObject var locationManager = LocationManager()
     
     var body: some Scene {
