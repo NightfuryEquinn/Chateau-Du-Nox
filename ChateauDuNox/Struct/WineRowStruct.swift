@@ -39,6 +39,7 @@ struct WineRowStruct: View {
                 
                 Text(String(format: "RM%.0f", wine.price))
                     .font(.custom("Didot", size: 20))
+                    .bold()
                     .padding(.bottom, 10)
                     .foregroundColor(AppColour.cBlack)
                 

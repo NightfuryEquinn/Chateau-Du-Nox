@@ -30,7 +30,6 @@ func updateWineOrder(wine: String, orderedDate: Date) {
             // Save the updated information to CoreData
             try container.viewContext.save()
         }
-        
     } catch {
         print("Error updating order: \(error.localizedDescription)")
     }

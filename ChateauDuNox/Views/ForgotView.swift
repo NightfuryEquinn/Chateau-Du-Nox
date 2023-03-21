@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ForgotView: View {
+    // State Variables
     @State private var inEmail = ""
     @State private var inNewPassword = ""
+    
+    @State private var showCSAlert = false
+    @State private var showUpdateAlert = false
     
     // Binding Variables
     @Binding var showForgotView: Bool
@@ -52,16 +56,12 @@ struct ForgotView: View {
                 .padding(.bottom, 60)
                 
                 Button(action: {
-                    print("Update")
-                    
                     if isValidEmail(email: inEmail) {
                         forgotAuthentication(email: inEmail, newPassword: inNewPassword)
-                        
-                        print("Update end")
-                        
+
                         showForgotView = false
-                    } else {
-                        print("Update error")
+                        
+                        showUpdateAlert = true
                     }
                 }) {
                     Text("Update")
@@ -76,9 +76,16 @@ struct ForgotView: View {
                 .padding(.horizontal, 120)
                 .padding(.bottom, 30)
                 .disabled(!self.canAuthenticate())
+                .alert(isPresented: $showUpdateAlert) {
+                    Alert(
+                        title: Text("Success"),
+                        message: Text("Your password has been updated."),
+                        dismissButton: .default(Text("Okay"))
+                    )
+                }
                 
                 Button(action: {
-                    print("Contact Service")
+                    showCSAlert = true
                 }) {
                     Text("Contact Service")
                         .font(.custom("Didot", size: 14))
@@ -86,6 +93,13 @@ struct ForgotView: View {
                 }
                 .padding(.horizontal, 80)
                 .padding(.bottom, 25)
+                .alert(isPresented: $showCSAlert) {
+                    Alert(
+                        title: Text("Customer Service"),
+                        message: Text("Please call us at 1300-44-0709."),
+                        dismissButton: .default(Text("Okay"))
+                    )
+                }
             }
             .background(AppColour.cYellow)
         }

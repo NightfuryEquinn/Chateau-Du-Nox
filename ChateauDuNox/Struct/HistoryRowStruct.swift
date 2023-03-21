@@ -13,6 +13,9 @@ struct HistoryRowStruct: View {
     @Binding var historyItem: HistoryItemStruct
     
     var body: some View {
+        let taxPrice = (historyItem.totalPrice - 59.90) / (1.26) * 0.26
+        let basePrice = (historyItem.totalPrice - 59.90 - taxPrice) / Double(historyItem.quantity)
+        
         VStack(alignment: .leading) {
             HStack {
                 Image(historyItem.bottleImage)
@@ -28,37 +31,48 @@ struct HistoryRowStruct: View {
                         .bold()
                         .foregroundColor(AppColour.cYellow)
                     
-                    Text(String(format: "RM%.2f", historyItem.totalPrice))
-                        .font(.custom("Didot", size: 20))
+                    Text("Quantity: \(historyItem.quantity)")
+                        .font(.custom("Avenir Next", size: 14))
                         .bold()
                         .foregroundColor(AppColour.cYellow)
                     
-                    Text("Quantity: \(historyItem.quantity)")
-                        .font(.custom("Didot", size: 14))
+                    Text("Price per bottle: \(String(format: "RM%.2f", basePrice))")
+                        .font(.custom("Avenir Next", size: 14))
+                        .bold()
+                        .foregroundColor(AppColour.cYellow)
+                    
+                    Text("Tax Price: \(String(format: "RM%.2f", taxPrice))")
+                        .font(.custom("Avenir Next", size: 14))
+                        .bold()
+                        .foregroundColor(AppColour.cYellow)
+                    
+                    Text("Total Price: \(String(format: "RM%.2f", historyItem.totalPrice))")
+                        .font(.custom("Avenir Next", size: 14))
                         .bold()
                         .foregroundColor(AppColour.cYellow)
                 }
             }
+            .padding(.bottom, 10.0)
             
             Text("To: \(historyItem.address)")
-                .font(.custom("Avenir Next", size: 18))
-                .padding(.bottom, 10)
+                .padding(.bottom, 2.5)
+                .font(.custom("Avenir Next", size: 16))
                 .foregroundColor(AppColour.cYellow)
             
             Text("From: \(historyItem.customer)")
-                .font(.custom("Avenir Next", size: 18))
-                .padding(.bottom, 10)
+                .padding(.bottom, 2.5)
+                .font(.custom("Avenir Next", size: 16))
                 .foregroundColor(AppColour.cYellow)
             
             Text("Paid on \(formatDateToString(historyItem.orderedDate))")
+                .padding(.bottom, 2.5)
                 .font(.custom("Avenir Next", size: 16))
-                .padding(.bottom, 10)
                 .foregroundColor(AppColour.cYellow)
             
             if (historyItem.deliveredDate != nil) {
                 Text("Delivered on \(formatDateToString(historyItem.deliveredDate ?? Date()))")
+                    .padding(.bottom, 2.5)
                     .font(.custom("Avenir Next", size: 16))
-                    .padding(.bottom, 10)
                     .foregroundColor(AppColour.cYellow)
             } else {
                 Button(action: {
@@ -66,20 +80,17 @@ struct HistoryRowStruct: View {
                     
                     updateWineOrder(wine: historyItem.wine, orderedDate: historyItem.orderedDate)
                 }) {
-                    HStack {
-                        Text("Received?")
-                            .font(.custom("Avenir Next", size: 16))
-                            .bold()
-                            .foregroundColor(AppColour.cYellow)
-                            .padding(5)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(AppColour.cLightGreen)
-                            .cornerRadius(50)
-                        Spacer()
-                    }
+                    Text("Received?")
+                        .font(.custom("Avenir Next", size: 16))
+                        .bold()
+                        .foregroundColor(AppColour.cYellow)
+                        .padding(5)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .background(AppColour.cLightGreen)
+                        .cornerRadius(50)
                 }
                 .padding(.vertical, 20.0)
-                .padding(.trailing, 80.0)
+                .padding(.trailing, 70.0)
             }
         }
         .padding(.horizontal, 35)

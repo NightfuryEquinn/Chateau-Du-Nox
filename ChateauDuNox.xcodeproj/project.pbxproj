@@ -266,12 +266,12 @@
 		64CD649629C1896B00C06DDC /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				64CD649429C1896700C06DDC /* SearchBarStruct.swift */,
 				64CD649729C18ABB00C06DDC /* WineRowStruct.swift */,
 				64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */,
 				6423BD9529C292B3003F044D /* CartItemStruct.swift */,
 				6499706529C5696E0091E541 /* HistoryItemStruct.swift */,
 				6499706729C56A590091E541 /* HistoryRowStruct.swift */,
-				64CD649429C1896700C06DDC /* SearchBarStruct.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -548,9 +548,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChateauDuNox/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Chateau Du Nox wants to access your microphone for a better communication between you and our customer service.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Chateau Du Nox wants to access your microphone for a better communication between you and our customer service.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -580,9 +583,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChateauDuNox/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Chateau Du Nox wants to access your microphone for a better communication between you and our customer service.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Chateau Du Nox wants to access your current location for a better delivery navigation.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Chateau Du Nox wants to access your microphone for a better communication between you and our customer service.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

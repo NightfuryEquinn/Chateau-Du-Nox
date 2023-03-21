@@ -44,7 +44,7 @@ struct ProfileView: View {
                     .font(.custom("Didot", size: 32))
                     .bold()
                     .foregroundColor(AppColour.cBlack)
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 10)
                 
                 VStack {
                     VStack {

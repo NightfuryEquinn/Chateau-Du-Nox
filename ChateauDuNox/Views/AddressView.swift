@@ -28,6 +28,7 @@ struct AddressView: View {
             VStack(alignment: .center) {
                 Text("Address")
                     .font(.custom("Didot", size: 24))
+                    .bold()
                     .foregroundColor(AppColour.cBlack)
                 
                 TextField("Enter address", text: $address)

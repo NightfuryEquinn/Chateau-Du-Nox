@@ -25,6 +25,7 @@ struct SignupView: View {
     // State Bool
     @State private var usernameExists = false
     @State private var emailExists = false
+    @State private var showRegisterAlert = false
     
     // Binding Variables
     @Binding var showSignupView: Bool
@@ -105,6 +106,8 @@ struct SignupView: View {
                             addUser()
                             
                             showSignupView = false
+                            
+                            showRegisterAlert = true
                         }
                     }) {
                         Text("Register")
@@ -119,6 +122,13 @@ struct SignupView: View {
                     .padding(.horizontal, 120)
                     .padding(.bottom, 30)
                     .disabled(!self.canAuthenticate())
+                    .alert(isPresented: $showRegisterAlert) {
+                        Alert(
+                            title: Text("Registration Success"),
+                            message: Text("Welcome to Chateau Du Nox, \(newUsername)!"),
+                            dismissButton: .default(Text("Okay"))
+                        )
+                    }
                     
                     Button(action: {
                         showSignupView = false
