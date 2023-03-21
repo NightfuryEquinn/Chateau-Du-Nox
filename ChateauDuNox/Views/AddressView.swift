@@ -19,6 +19,8 @@ struct AddressView: View {
     @Binding var showAddressView: Bool
     @Binding var showPaymentView: Bool
     
+    @Binding var historyItems: [HistoryItemStruct]
+    
     var body: some View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
@@ -39,6 +41,8 @@ struct AddressView: View {
                     
                     showAddressView = false
                     showPaymentView = false
+                    
+                    addWineToOrder(wineOrders: historyItems)
                 }) {
                     Text("Confirm Address")
                         .font(.custom("Didot", size: 20))
@@ -81,6 +85,22 @@ struct AddressView: View {
 
 struct AddressView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressView(showAddressView: .constant(false), showPaymentView: .constant(false)).environmentObject(LocationManager())
+        let historyItem = HistoryItemStruct(
+            wine: "Default Wine",
+            customer: "Default Customer",
+            bottleImage: "Default Image",
+            orderedDate: Date(),
+            deliveredDate: nil,
+            address: "Default Address",
+            quantity: 0,
+            totalPrice: 0
+        )
+        
+        AddressView(
+            showAddressView: .constant(false),
+            showPaymentView: .constant(false),
+            historyItems: .constant([historyItem])
+        )
+            .environmentObject(LocationManager())
     }
 }

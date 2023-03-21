@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CartItemStruct {
-    let name: String
+    let wine: String
     let bottleImage: String
     
     var basePrice: Double

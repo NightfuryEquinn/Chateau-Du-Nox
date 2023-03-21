@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HistoryItemStruct {
-    let name: String
+    let wine: String
     let customer: String
     let bottleImage: String
     let orderedDate: Date

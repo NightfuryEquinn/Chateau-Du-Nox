@@ -25,6 +25,8 @@ struct PaymentView: View {
     // Binding Variables
     @Binding var showPaymentView: Bool
     
+    @Binding var historyItems: [HistoryItemStruct]
+    
     var body: some View {
         GeometryReader { geometry in
             AppColour.cYellow.ignoresSafeArea()
@@ -141,7 +143,7 @@ struct PaymentView: View {
                     .padding(.bottom, 40)
                     .disabled(!isCardNumberValid || !isCVVValid || !isExpirationDateValid)
                     .sheet(isPresented: $showAddressView) {
-                        AddressView(showAddressView: $showAddressView, showPaymentView: $showPaymentView)
+                        AddressView(showAddressView: $showAddressView, showPaymentView: $showPaymentView, historyItems: $historyItems)
                     }
                 }
             }
@@ -154,6 +156,17 @@ struct PaymentView: View {
 
 struct PaymentView_Previews: PreviewProvider {
     static var previews: some View {
-        PaymentView(showPaymentView: .constant(false))
+        let historyItem = HistoryItemStruct(
+            wine: "Default Wine",
+            customer: "Default Customer",
+            bottleImage: "Default Image",
+            orderedDate: Date(),
+            deliveredDate: nil,
+            address: "Default Address",
+            quantity: 0,
+            totalPrice: 0
+        )
+        
+        PaymentView(showPaymentView: .constant(false), historyItems: .constant([historyItem]))
     }
 }

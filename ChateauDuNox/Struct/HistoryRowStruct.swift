@@ -23,7 +23,7 @@ struct HistoryRowStruct: View {
                     .padding(.trailing, 35)
                 
                 VStack(alignment: .leading) {
-                    Text(historyItem.name)
+                    Text(historyItem.wine)
                         .font(.custom("Didot", size: 24))
                         .bold()
                         .padding(.bottom, 10)
@@ -99,7 +99,7 @@ struct HistoryRowStruct: View {
 struct HistoryRowStruct_Previews: PreviewProvider {
     static var previews: some View {
         let historyItem = HistoryItemStruct(
-            name: "Default Name",
+            wine: "Default Wine",
             customer: "Default Customer",
             bottleImage: "Default Bottle Image",
             orderedDate: Date(),
@@ -112,7 +112,7 @@ struct HistoryRowStruct_Previews: PreviewProvider {
         HistoryRowStruct(
             historyItem: .constant(
                 HistoryItemStruct(
-                    name: historyItem.name,
+                    wine: historyItem.wine,
                     customer: historyItem.customer,
                     bottleImage: historyItem.bottleImage,
                     orderedDate: historyItem.orderedDate,

@@ -22,7 +22,7 @@ struct CartRowStruct: View {
                     .padding(.trailing, 35)
                 
                 VStack(alignment: .leading) {
-                    Text(cartItem.name)
+                    Text(cartItem.wine)
                         .font(.custom("Didot", size: 24))
                         .bold()
                         .padding(.bottom, 10)
@@ -40,6 +40,9 @@ struct CartRowStruct: View {
                             .foregroundColor(AppColour.cDarkGreen)
                             .background(AppColour.cYellow)
                             .cornerRadius(10.0)
+                            .onChange(of: cartItem.quantity) { newQuantity in
+                                updateQuantity(wine: cartItem.wine, quantity: cartItem.quantity)
+                            }
                     }
                     .padding(.vertical, 10.0)
                     .padding(.trailing, 10.0)
@@ -47,7 +50,7 @@ struct CartRowStruct: View {
                     Button(action: {
                         print("Remove")
                         
-                        deleteWineFromCart(wine: cartItem.name)
+                        deleteWineFromCart(wine: cartItem.wine)
                     }) {
                         HStack {
                             Spacer()
@@ -74,7 +77,7 @@ struct CartRowStruct: View {
 struct CartRowStruct_Previews: PreviewProvider {
     static var previews: some View {
         let cartItem = CartItemStruct(
-            name: "Default Name",
+            wine: "Default Wine",
             bottleImage: "Default Bottle Image",
             basePrice: 0,
             quantity: 1
@@ -83,7 +86,7 @@ struct CartRowStruct_Previews: PreviewProvider {
         CartRowStruct(
             cartItem: .constant(
                 CartItemStruct(
-                    name: cartItem.name,
+                    wine: cartItem.wine,
                     bottleImage: cartItem.bottleImage,
                     basePrice: cartItem.basePrice,
                     quantity: cartItem.quantity

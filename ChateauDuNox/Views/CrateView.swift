@@ -20,6 +20,8 @@ struct CrateView: View {
         return items.reduce(0) { $0 + $1.totalPrice }
     }
     
+    @State var historyItems: [HistoryItemStruct] = []
+    
     var body: some View {
         VStack {
             Image("barrel-cover")
@@ -96,6 +98,23 @@ struct CrateView: View {
                         print("Checkout")
                         
                         self.showPaymentView = true
+                        
+                        historyItems.removeAll()
+                        
+                        for item in items {
+                            let historyItem = HistoryItemStruct(
+                                wine: item.wine,
+                                customer: userSessionName ?? "",
+                                bottleImage: item.bottleImage,
+                                orderedDate: Date(),
+                                deliveredDate: nil,
+                                address: userSessionAddress ?? "",
+                                quantity: item.quantity,
+                                totalPrice: totalPrice + 59.90
+                            )
+                            
+                            historyItems.append(historyItem)
+                        }
                     }) {
                         Text("Checkout")
                             .font(.custom("Didot", size: 20))
@@ -109,7 +128,7 @@ struct CrateView: View {
                     .padding(.horizontal, 120)
                     .padding(.bottom, 20)
                     .sheet(isPresented: $showPaymentView) {
-                        PaymentView(showPaymentView: $showPaymentView)
+                        PaymentView(showPaymentView: $showPaymentView, historyItems: $historyItems)
                     }
                 
                 } else {

@@ -25,7 +25,7 @@ func fetchWineFromCart() -> [CartItemStruct] {
         
         return crates.map {
             CartItemStruct(
-                name: $0.wine ?? "",
+                wine: $0.wine ?? "",
                 bottleImage: $0.bottleImage ?? "",
                 basePrice: $0.price,
                 quantity: Int($0.quantity)
