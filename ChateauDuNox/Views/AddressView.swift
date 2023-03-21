@@ -42,8 +42,8 @@ struct AddressView: View {
                     showAddressView = false
                     showPaymentView = false
                     
-                    for var historyItem in historyItems {
-                        historyItem.address = address
+                    for index in historyItems.indices {
+                        historyItems[index].address = address
                     }
                     
                     addWineToOrder(wineOrders: historyItems)
