@@ -13,8 +13,8 @@ struct HistoryItemStruct {
     let bottleImage: String
     let orderedDate: Date
     let deliveredDate: Date?
-    let address: String
     
+    var address: String
     var quantity: Int
     var totalPrice: Double
 }

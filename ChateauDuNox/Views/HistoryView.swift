@@ -11,7 +11,7 @@ struct HistoryView: View {
     // State Variables
     @State private var filterDate = Date()
     
-    @State var items: [HistoryItemStruct] = []
+    @State var items: [HistoryItemStruct] = fetchWineFromOrder()
     
     var filteredHistory: [Binding<HistoryItemStruct>] {
         items.indices.filter { index in

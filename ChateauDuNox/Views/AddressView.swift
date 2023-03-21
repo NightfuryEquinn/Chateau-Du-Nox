@@ -42,7 +42,15 @@ struct AddressView: View {
                     showAddressView = false
                     showPaymentView = false
                     
+                    for var historyItem in historyItems {
+                        historyItem.address = address
+                    }
+                    
                     addWineToOrder(wineOrders: historyItems)
+                    
+                    for historyItem in historyItems {
+                        deleteWineFromCart(wine: historyItem.wine)
+                    }
                 }) {
                     Text("Confirm Address")
                         .font(.custom("Didot", size: 20))
