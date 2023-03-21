@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreData
-import SwiftUI
 
 func updateUserInfo(password: String, email: String, contact: String, address: String) {
     let container = NSPersistentContainer(name: "ChateauDB")

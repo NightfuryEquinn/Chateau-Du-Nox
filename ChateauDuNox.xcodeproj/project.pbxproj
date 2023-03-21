@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		64117CAD29C9345E00A43F66 /* AddWineToOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64117CAC29C9345E00A43F66 /* AddWineToOrder.swift */; };
 		64117CAF29C9555900A43F66 /* FetchWineFromOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64117CAE29C9555900A43F66 /* FetchWineFromOrder.swift */; };
+		64117CB129C96E1D00A43F66 /* UpdateWineOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64117CB029C96E1D00A43F66 /* UpdateWineOrder.swift */; };
 		6423BD9629C292B3003F044D /* CartItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6423BD9529C292B3003F044D /* CartItemStruct.swift */; };
 		6423BD9829C2A1CB003F044D /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6423BD9729C2A1CB003F044D /* PaymentView.swift */; };
 		6423BD9C29C2A846003F044D /* cellar-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 6423BD9B29C2A846003F044D /* cellar-cover.png */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		64117CAC29C9345E00A43F66 /* AddWineToOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWineToOrder.swift; sourceTree = "<group>"; };
 		64117CAE29C9555900A43F66 /* FetchWineFromOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWineFromOrder.swift; sourceTree = "<group>"; };
+		64117CB029C96E1D00A43F66 /* UpdateWineOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateWineOrder.swift; sourceTree = "<group>"; };
 		6423BD9529C292B3003F044D /* CartItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemStruct.swift; sourceTree = "<group>"; };
 		6423BD9729C2A1CB003F044D /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		6423BD9B29C2A846003F044D /* cellar-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellar-cover.png"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				64681B4629C835C300BE7944 /* DeleteWineFromCart.swift */,
 				64117CAC29C9345E00A43F66 /* AddWineToOrder.swift */,
 				64117CAE29C9555900A43F66 /* FetchWineFromOrder.swift */,
+				64117CB029C96E1D00A43F66 /* UpdateWineOrder.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				64A80A1429C04E2B0055E91B /* CrateView.swift in Sources */,
 				64A80A1629C04E420055E91B /* HistoryView.swift in Sources */,
 				6499707329C58E950091E541 /* LocationManager.swift in Sources */,
+				64117CB129C96E1D00A43F66 /* UpdateWineOrder.swift in Sources */,
 				647805CF29BF0F8000018916 /* MainMenuView.swift in Sources */,
 				64117CAF29C9555900A43F66 /* FetchWineFromOrder.swift in Sources */,
 				64E4690629BFF68600874300 /* WineDetailsView.swift in Sources */,

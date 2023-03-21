@@ -22,23 +22,20 @@ struct HistoryRowStruct: View {
                     .aspectRatio(contentMode: .fill)
                     .padding(.trailing, 35)
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10.0) {
                     Text(historyItem.wine)
                         .font(.custom("Didot", size: 24))
                         .bold()
-                        .padding(.bottom, 10)
                         .foregroundColor(AppColour.cYellow)
                     
                     Text(String(format: "RM%.2f", historyItem.totalPrice))
                         .font(.custom("Didot", size: 20))
                         .bold()
-                        .padding(.bottom, 10)
                         .foregroundColor(AppColour.cYellow)
                     
                     Text("Quantity: \(historyItem.quantity)")
-                        .font(.custom("Didot", size: 18))
+                        .font(.custom("Didot", size: 14))
                         .bold()
-                        .padding(.bottom, 10)
                         .foregroundColor(AppColour.cYellow)
                 }
             }
@@ -66,6 +63,8 @@ struct HistoryRowStruct: View {
             } else {
                 Button(action: {
                     print("Received")
+                    
+                    updateWineOrder(wine: historyItem.wine, orderedDate: historyItem.orderedDate)
                 }) {
                     HStack {
                         Text("Received?")
