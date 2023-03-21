@@ -90,8 +90,6 @@ struct ProfileView: View {
                 
                 HStack(alignment: .center, spacing: 40.0) {
                     Button(action: {
-                        print("Logout")
-                        
                         obliterateUserSession()
                         
                         isLogin = false
@@ -113,8 +111,6 @@ struct ProfileView: View {
                     )
                     
                     Button(action: {
-                        print("Edit")
-                        
                         self.showUpdateProfileView = true
                     }) {
                         Text("Edit")

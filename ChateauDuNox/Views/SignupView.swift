@@ -26,6 +26,8 @@ struct SignupView: View {
     @State private var usernameExists = false
     @State private var emailExists = false
     @State private var showRegisterAlert = false
+    @State private var showUsernameAlert = false
+    @State private var showEmailAlert = false
     
     // Binding Variables
     @Binding var showSignupView: Bool
@@ -57,6 +59,13 @@ struct SignupView: View {
                         TextField("Enter username", text: $newUsername)
                             .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .alert(isPresented: $showUsernameAlert) {
+                                Alert(
+                                    title: Text("Username Exists"),
+                                    message: Text("Username has already been taken."),
+                                    dismissButton: .default(Text("Okay"))
+                                )
+                            }
                         
                         // Password
                         Text("Password")
@@ -72,16 +81,23 @@ struct SignupView: View {
                             .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(AppColour.cBlack)
                         
-                        TextField("Enter email address", text: $newEmail)
+                        TextField("cancer@zodiac.com", text: $newEmail)
                             .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .alert(isPresented: $showEmailAlert) {
+                                Alert(
+                                    title: Text("Email Exists"),
+                                    message: Text("Email address has already been taken."),
+                                    dismissButton: .default(Text("Okay"))
+                                )
+                            }
                         
                         // Contact Number
                         Text("Contact")
                             .font(.custom("Avenir Next", size: 18))
                             .foregroundColor(AppColour.cBlack)
                         
-                        TextField("Enter contact", text: $newContact)
+                        TextField("012xxx1234", text: $newContact)
                             .font(.custom("Avenir Next", size: 18))
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
@@ -99,13 +115,11 @@ struct SignupView: View {
                     
                     Button(action: {
                         if checkUsernameExists() {
-                            print("Username exist")
+                            showUsernameAlert = true
                         } else if checkEmailExists() {
-                            print("Email exist")
+                            showEmailAlert = true
                         } else {
                             addUser()
-                            
-                            showSignupView = false
                             
                             showRegisterAlert = true
                         }
@@ -122,12 +136,10 @@ struct SignupView: View {
                     .padding(.horizontal, 120)
                     .padding(.bottom, 30)
                     .disabled(!self.canAuthenticate())
-                    .alert(isPresented: $showRegisterAlert) {
-                        Alert(
-                            title: Text("Registration Success"),
-                            message: Text("Welcome to Chateau Du Nox, \(newUsername)!"),
-                            dismissButton: .default(Text("Okay"))
-                        )
+                    .alert("Registration Success", isPresented: $showRegisterAlert) {
+                        Button("Welcome!", action: {
+                            showSignupView = false
+                        })
                     }
                     
                     Button(action: {
@@ -136,9 +148,6 @@ struct SignupView: View {
                         Text("I already have an account")
                             .font(.custom("Didot", size: 14))
                             .foregroundColor(AppColour.cBlack)
-                    }
-                    .onTapGesture {
-                        showSignupView = false
                     }
                     .padding(.horizontal, 80)
                     .padding(.bottom, 30)
@@ -159,8 +168,6 @@ struct SignupView: View {
         
         do {
             try viewContext.save()
-            
-            print("New User")
         } catch {
             let error = error as NSError
             fatalError("An error occured: \(error)")
