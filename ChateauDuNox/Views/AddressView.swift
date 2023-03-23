@@ -32,9 +32,13 @@ struct AddressView: View {
                     .bold()
                     .foregroundColor(AppColour.cBlack)
                 
-                TextField("Enter address", text: $address)
-                    .font(.custom("Avenir Next", size: 18))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Enter address", text: $address) { isEditing in
+                    if isEditing {
+                        updateCoordinate()
+                    }
+                }
+                .font(.custom("Avenir Next", size: 18))
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 Button(action: {
                     showConfirmAlert = true
