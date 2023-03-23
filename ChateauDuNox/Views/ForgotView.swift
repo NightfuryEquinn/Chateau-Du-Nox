@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ForgotView: View {
+    // Database
+    @Environment(\.managedObjectContext) var viewContext
+    
+    @FetchRequest(entity: User.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)])
+    private var users: FetchedResults<User>
+    
     // State Variables
     @State private var inEmail = ""
     @State private var inNewPassword = ""
     
     @State private var showCSAlert = false
     @State private var showUpdateAlert = false
+    @State private var showInvalidAlert = false
     
     // Binding Variables
     @Binding var showForgotView: Bool
@@ -43,6 +51,13 @@ struct ForgotView: View {
                     TextField("Email Address", text: $inEmail)
                         .font(.custom("Avenir Next", size: 18))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .alert(isPresented: $showInvalidAlert) {
+                            Alert(
+                                title: Text("Email not found"),
+                                message: Text("Email address does not exists."),
+                                dismissButton: .default(Text("Okay"))
+                            )
+                        }
                     
                     Text("New Password")
                         .font(.custom("Avenir Next", size: 18))
@@ -56,12 +71,12 @@ struct ForgotView: View {
                 .padding(.bottom, 60)
                 
                 Button(action: {
-                    if isValidEmail(email: inEmail) {
+                    if isValidEmail(email: inEmail) && checkEmailExists() {
                         forgotAuthentication(email: inEmail, newPassword: inNewPassword)
-
-                        showForgotView = false
                         
                         showUpdateAlert = true
+                    } else {
+                        showInvalidAlert = true
                     }
                 }) {
                     Text("Update")
@@ -80,7 +95,9 @@ struct ForgotView: View {
                     Alert(
                         title: Text("Success"),
                         message: Text("Your password has been updated."),
-                        dismissButton: .default(Text("Okay"))
+                        dismissButton: .default(Text("Okay"), action: {
+                            showForgotView = false
+                        })
                     )
                 }
                 
@@ -108,6 +125,21 @@ struct ForgotView: View {
     // Enable and disable button
     private func canAuthenticate() -> Bool {
         !self.inEmail.isEmpty && !self.inNewPassword.isEmpty
+    }
+    
+    // Check for existing email address
+    private func checkEmailExists() -> Bool {
+        let request = NSFetchRequest<User>(entityName: "User")
+        request.predicate = NSPredicate(format: "email == %@", inEmail)
+        request.fetchLimit = 1
+        
+        do {
+            let users = try viewContext.fetch(request)
+            return !users.isEmpty
+        } catch {
+            print("Error fetching users: \(error.localizedDescription)")
+            return false
+        }
     }
 }
 
