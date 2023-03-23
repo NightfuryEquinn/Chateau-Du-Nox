@@ -36,6 +36,31 @@
 		647EF5C929BC2247002A9897 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C829BC2247002A9897 /* SignupView.swift */; };
 		647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */; };
 		647EF5D229BC349F002A9897 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EF5C629BC2224002A9897 /* LoginView.swift */; };
+		648D39F729CBED5D00767DFE /* nebbiolo-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D39EB29CBED5C00767DFE /* nebbiolo-grapes.jpg */; };
+		648D39F829CBED5D00767DFE /* zinfandel-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D39EC29CBED5C00767DFE /* zinfandel-bottle.png */; };
+		648D39F929CBED5D00767DFE /* merlot-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D39ED29CBED5C00767DFE /* merlot-grapes.jpg */; };
+		648D39FA29CBED5D00767DFE /* negroamaro-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D39EE29CBED5C00767DFE /* negroamaro-bottle.png */; };
+		648D39FB29CBED5D00767DFE /* riesling-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D39EF29CBED5C00767DFE /* riesling-bottle.png */; };
+		648D39FC29CBED5D00767DFE /* negroamaro-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F029CBED5C00767DFE /* negroamaro-grapes.jpg */; };
+		648D39FD29CBED5D00767DFE /* syrah-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F129CBED5C00767DFE /* syrah-bottle.png */; };
+		648D39FE29CBED5D00767DFE /* syrah-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F229CBED5D00767DFE /* syrah-grapes.jpg */; };
+		648D39FF29CBED5D00767DFE /* nebbiolo-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F329CBED5D00767DFE /* nebbiolo-bottle.png */; };
+		648D3A0029CBED5D00767DFE /* zinfandel-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F429CBED5D00767DFE /* zinfandel-grapes.jpg */; };
+		648D3A0129CBED5D00767DFE /* merlot-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F529CBED5D00767DFE /* merlot-bottle.png */; };
+		648D3A0229CBED5D00767DFE /* riesling-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D39F629CBED5D00767DFE /* riesling-grapes.jpg */; };
+		648D3A0429CBED7A00767DFE /* erbaluce-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0329CBED7A00767DFE /* erbaluce-bottle.png */; };
+		648D3A0D29CBED9300767DFE /* dolcetto-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0529CBED9200767DFE /* dolcetto-bottle.png */; };
+		648D3A0E29CBED9300767DFE /* chardonnay-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0629CBED9200767DFE /* chardonnay-grapes.jpg */; };
+		648D3A0F29CBED9300767DFE /* chardonnay-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0729CBED9200767DFE /* chardonnay-bottle.png */; };
+		648D3A1029CBED9300767DFE /* cortese-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0829CBED9200767DFE /* cortese-grapes.jpg */; };
+		648D3A1129CBED9300767DFE /* dolcetto-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0929CBED9300767DFE /* dolcetto-grapes.jpg */; };
+		648D3A1229CBED9300767DFE /* cortese-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0A29CBED9300767DFE /* cortese-bottle.png */; };
+		648D3A1329CBED9300767DFE /* cabernet-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0B29CBED9300767DFE /* cabernet-grapes.jpg */; };
+		648D3A1429CBED9300767DFE /* cabernet-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A0C29CBED9300767DFE /* cabernet-bottle.png */; };
+		648D3A1729CBEDA900767DFE /* arneis-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A1529CBEDA900767DFE /* arneis-bottle.png */; };
+		648D3A1829CBEDA900767DFE /* arneis-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A1629CBEDA900767DFE /* arneis-grapes.jpg */; };
+		648D3A1B29CBEDBF00767DFE /* blanc-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A1929CBEDBF00767DFE /* blanc-bottle.png */; };
+		648D3A1C29CBEDBF00767DFE /* barbera-bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D3A1A29CBEDBF00767DFE /* barbera-bottle.png */; };
 		6499706629C5696E0091E541 /* HistoryItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706529C5696E0091E541 /* HistoryItemStruct.swift */; };
 		6499706829C56A590091E541 /* HistoryRowStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706729C56A590091E541 /* HistoryRowStruct.swift */; };
 		6499706C29C585D50091E541 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499706B29C585D50091E541 /* AddressView.swift */; };
@@ -55,14 +80,11 @@
 		64CD64A529C193C600C06DDC /* FormatChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD64A429C193C600C06DDC /* FormatChecker.swift */; };
 		64CD64A929C1A4F300C06DDC /* barrel-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 64CD64A829C1A4F300C06DDC /* barrel-cover.png */; };
 		64CD64AB29C1B6EB00C06DDC /* CartRowStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */; };
-		64E468FB29BFEF7400874300 /* blanc-bottle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F129BFEF7400874300 /* blanc-bottle.jpg */; };
-		64E468FC29BFEF7400874300 /* barbera-bottle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F229BFEF7400874300 /* barbera-bottle.jpg */; };
 		64E468FD29BFEF7400874300 /* blanc-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F329BFEF7400874300 /* blanc-grapes.jpg */; };
 		64E468FE29BFEF7400874300 /* pp-placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F429BFEF7400874300 /* pp-placeholder.jpg */; };
 		64E468FF29BFEF7400874300 /* barbera-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F529BFEF7400874300 /* barbera-grapes.jpg */; };
 		64E4690029BFEF7400874300 /* pinot-noir-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F629BFEF7400874300 /* pinot-noir-grapes.jpg */; };
 		64E4690129BFEF7400874300 /* erbaluce-grapes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F729BFEF7400874300 /* erbaluce-grapes.jpg */; };
-		64E4690229BFEF7400874300 /* erbaluce-bottle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E468F829BFEF7400874300 /* erbaluce-bottle.jpg */; };
 		64E4690629BFF68600874300 /* WineDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4690529BFF68600874300 /* WineDetailsView.swift */; };
 		64F634E829BC43AE006E03D8 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F634E729BC43AE006E03D8 /* ForgotView.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +119,31 @@
 		647EF5C629BC2224002A9897 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		647EF5C829BC2247002A9897 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-cover.jpeg"; sourceTree = "<group>"; };
+		648D39EB29CBED5C00767DFE /* nebbiolo-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nebbiolo-grapes.jpg"; sourceTree = "<group>"; };
+		648D39EC29CBED5C00767DFE /* zinfandel-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zinfandel-bottle.png"; sourceTree = "<group>"; };
+		648D39ED29CBED5C00767DFE /* merlot-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "merlot-grapes.jpg"; sourceTree = "<group>"; };
+		648D39EE29CBED5C00767DFE /* negroamaro-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "negroamaro-bottle.png"; sourceTree = "<group>"; };
+		648D39EF29CBED5C00767DFE /* riesling-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "riesling-bottle.png"; sourceTree = "<group>"; };
+		648D39F029CBED5C00767DFE /* negroamaro-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "negroamaro-grapes.jpg"; sourceTree = "<group>"; };
+		648D39F129CBED5C00767DFE /* syrah-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "syrah-bottle.png"; sourceTree = "<group>"; };
+		648D39F229CBED5D00767DFE /* syrah-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "syrah-grapes.jpg"; sourceTree = "<group>"; };
+		648D39F329CBED5D00767DFE /* nebbiolo-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nebbiolo-bottle.png"; sourceTree = "<group>"; };
+		648D39F429CBED5D00767DFE /* zinfandel-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zinfandel-grapes.jpg"; sourceTree = "<group>"; };
+		648D39F529CBED5D00767DFE /* merlot-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "merlot-bottle.png"; sourceTree = "<group>"; };
+		648D39F629CBED5D00767DFE /* riesling-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "riesling-grapes.jpg"; sourceTree = "<group>"; };
+		648D3A0329CBED7A00767DFE /* erbaluce-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "erbaluce-bottle.png"; sourceTree = "<group>"; };
+		648D3A0529CBED9200767DFE /* dolcetto-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dolcetto-bottle.png"; sourceTree = "<group>"; };
+		648D3A0629CBED9200767DFE /* chardonnay-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chardonnay-grapes.jpg"; sourceTree = "<group>"; };
+		648D3A0729CBED9200767DFE /* chardonnay-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chardonnay-bottle.png"; sourceTree = "<group>"; };
+		648D3A0829CBED9200767DFE /* cortese-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cortese-grapes.jpg"; sourceTree = "<group>"; };
+		648D3A0929CBED9300767DFE /* dolcetto-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dolcetto-grapes.jpg"; sourceTree = "<group>"; };
+		648D3A0A29CBED9300767DFE /* cortese-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cortese-bottle.png"; sourceTree = "<group>"; };
+		648D3A0B29CBED9300767DFE /* cabernet-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cabernet-grapes.jpg"; sourceTree = "<group>"; };
+		648D3A0C29CBED9300767DFE /* cabernet-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabernet-bottle.png"; sourceTree = "<group>"; };
+		648D3A1529CBEDA900767DFE /* arneis-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arneis-bottle.png"; sourceTree = "<group>"; };
+		648D3A1629CBEDA900767DFE /* arneis-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arneis-grapes.jpg"; sourceTree = "<group>"; };
+		648D3A1929CBEDBF00767DFE /* blanc-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blanc-bottle.png"; sourceTree = "<group>"; };
+		648D3A1A29CBEDBF00767DFE /* barbera-bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barbera-bottle.png"; sourceTree = "<group>"; };
 		6499706529C5696E0091E541 /* HistoryItemStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemStruct.swift; sourceTree = "<group>"; };
 		6499706729C56A590091E541 /* HistoryRowStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowStruct.swift; sourceTree = "<group>"; };
 		6499706B29C585D50091E541 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -116,14 +163,11 @@
 		64CD64A429C193C600C06DDC /* FormatChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatChecker.swift; sourceTree = "<group>"; };
 		64CD64A829C1A4F300C06DDC /* barrel-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrel-cover.png"; sourceTree = "<group>"; };
 		64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRowStruct.swift; sourceTree = "<group>"; };
-		64E468F129BFEF7400874300 /* blanc-bottle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blanc-bottle.jpg"; sourceTree = "<group>"; };
-		64E468F229BFEF7400874300 /* barbera-bottle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-bottle.jpg"; sourceTree = "<group>"; };
 		64E468F329BFEF7400874300 /* blanc-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blanc-grapes.jpg"; sourceTree = "<group>"; };
 		64E468F429BFEF7400874300 /* pp-placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pp-placeholder.jpg"; sourceTree = "<group>"; };
 		64E468F529BFEF7400874300 /* barbera-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbera-grapes.jpg"; sourceTree = "<group>"; };
 		64E468F629BFEF7400874300 /* pinot-noir-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pinot-noir-grapes.jpg"; sourceTree = "<group>"; };
 		64E468F729BFEF7400874300 /* erbaluce-grapes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "erbaluce-grapes.jpg"; sourceTree = "<group>"; };
-		64E468F829BFEF7400874300 /* erbaluce-bottle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "erbaluce-bottle.jpg"; sourceTree = "<group>"; };
 		64E4690529BFF68600874300 /* WineDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsView.swift; sourceTree = "<group>"; };
 		64F634E729BC43AE006E03D8 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -232,24 +276,46 @@
 		647EF5D129BC29D9002A9897 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				64E468F229BFEF7400874300 /* barbera-bottle.jpg */,
+				648D3A1529CBEDA900767DFE /* arneis-bottle.png */,
+				648D3A1629CBEDA900767DFE /* arneis-grapes.jpg */,
+				648D3A1A29CBEDBF00767DFE /* barbera-bottle.png */,
+				64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */,
 				64E468F529BFEF7400874300 /* barbera-grapes.jpg */,
-				64E468F129BFEF7400874300 /* blanc-bottle.jpg */,
+				64CD64A829C1A4F300C06DDC /* barrel-cover.png */,
+				648D3A1929CBEDBF00767DFE /* blanc-bottle.png */,
 				64E468F329BFEF7400874300 /* blanc-grapes.jpg */,
-				64E468F829BFEF7400874300 /* erbaluce-bottle.jpg */,
+				648D3A0C29CBED9300767DFE /* cabernet-bottle.png */,
+				648D3A0B29CBED9300767DFE /* cabernet-grapes.jpg */,
+				6423BD9B29C2A846003F044D /* cellar-cover.png */,
+				648D3A0729CBED9200767DFE /* chardonnay-bottle.png */,
+				648D3A0629CBED9200767DFE /* chardonnay-grapes.jpg */,
+				647805C829BEEE3E00018916 /* chateauLogo.png */,
+				648D3A0A29CBED9300767DFE /* cortese-bottle.png */,
+				648D3A0829CBED9200767DFE /* cortese-grapes.jpg */,
+				648D3A0529CBED9200767DFE /* dolcetto-bottle.png */,
+				648D3A0929CBED9300767DFE /* dolcetto-grapes.jpg */,
+				648D3A0329CBED7A00767DFE /* erbaluce-bottle.png */,
 				64E468F729BFEF7400874300 /* erbaluce-grapes.jpg */,
+				6423BDA029C2A9B8003F044D /* mastercard.png */,
+				648D39F529CBED5D00767DFE /* merlot-bottle.png */,
+				648D39ED29CBED5C00767DFE /* merlot-grapes.jpg */,
+				648D39F329CBED5D00767DFE /* nebbiolo-bottle.png */,
+				648D39EB29CBED5C00767DFE /* nebbiolo-grapes.jpg */,
+				648D39EE29CBED5C00767DFE /* negroamaro-bottle.png */,
+				648D39F029CBED5C00767DFE /* negroamaro-grapes.jpg */,
+				647805CA29BEF69500018916 /* pinot-noir-bottle.png */,
+				647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */,
 				64E468F629BFEF7400874300 /* pinot-noir-grapes.jpg */,
 				64E468F429BFEF7400874300 /* pp-placeholder.jpg */,
-				647805CA29BEF69500018916 /* pinot-noir-bottle.png */,
-				647805C829BEEE3E00018916 /* chateauLogo.png */,
-				64CD649D29C18E4500C06DDC /* vineyard-cover.jpeg */,
-				6423BDA029C2A9B8003F044D /* mastercard.png */,
-				6423BD9F29C2A9B8003F044D /* visa.png */,
+				648D39EF29CBED5C00767DFE /* riesling-bottle.png */,
 				64C9AB9729BC53DB00025C95 /* riesling-cover.jpeg */,
-				64C9AB9929BC551E00025C95 /* barbera-cover.jpeg */,
-				64CD64A829C1A4F300C06DDC /* barrel-cover.png */,
-				6423BD9B29C2A846003F044D /* cellar-cover.png */,
-				647EF5CF29BC29CE002A9897 /* pinot-noir-cover.jpeg */,
+				648D39F629CBED5D00767DFE /* riesling-grapes.jpg */,
+				648D39F129CBED5C00767DFE /* syrah-bottle.png */,
+				648D39F229CBED5D00767DFE /* syrah-grapes.jpg */,
+				64CD649D29C18E4500C06DDC /* vineyard-cover.jpeg */,
+				6423BD9F29C2A9B8003F044D /* visa.png */,
+				648D39EC29CBED5C00767DFE /* zinfandel-bottle.png */,
+				648D39F429CBED5D00767DFE /* zinfandel-grapes.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -348,26 +414,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648D3A0429CBED7A00767DFE /* erbaluce-bottle.png in Resources */,
 				64E468FD29BFEF7400874300 /* blanc-grapes.jpg in Resources */,
+				648D39FF29CBED5D00767DFE /* nebbiolo-bottle.png in Resources */,
+				648D39F929CBED5D00767DFE /* merlot-grapes.jpg in Resources */,
 				647805C929BEEE3E00018916 /* chateauLogo.png in Resources */,
 				64E4690029BFEF7400874300 /* pinot-noir-grapes.jpg in Resources */,
+				648D3A1B29CBEDBF00767DFE /* blanc-bottle.png in Resources */,
 				64C9AB9829BC53DB00025C95 /* riesling-cover.jpeg in Resources */,
-				64E468FC29BFEF7400874300 /* barbera-bottle.jpg in Resources */,
+				648D3A1729CBEDA900767DFE /* arneis-bottle.png in Resources */,
+				648D3A1829CBEDA900767DFE /* arneis-grapes.jpg in Resources */,
+				648D3A0129CBED5D00767DFE /* merlot-bottle.png in Resources */,
 				6423BD9C29C2A846003F044D /* cellar-cover.png in Resources */,
+				648D39FD29CBED5D00767DFE /* syrah-bottle.png in Resources */,
 				647EF5B329BC1D6D002A9897 /* Preview Assets.xcassets in Resources */,
 				6423BDA229C2A9B8003F044D /* mastercard.png in Resources */,
+				648D3A1229CBED9300767DFE /* cortese-bottle.png in Resources */,
+				648D3A0F29CBED9300767DFE /* chardonnay-bottle.png in Resources */,
 				64C9AB9A29BC551F00025C95 /* barbera-cover.jpeg in Resources */,
+				648D3A0E29CBED9300767DFE /* chardonnay-grapes.jpg in Resources */,
+				648D39FB29CBED5D00767DFE /* riesling-bottle.png in Resources */,
+				648D3A0229CBED5D00767DFE /* riesling-grapes.jpg in Resources */,
+				648D3A1129CBED9300767DFE /* dolcetto-grapes.jpg in Resources */,
+				648D39FA29CBED5D00767DFE /* negroamaro-bottle.png in Resources */,
+				648D39F829CBED5D00767DFE /* zinfandel-bottle.png in Resources */,
 				647EF5D029BC29CE002A9897 /* pinot-noir-cover.jpeg in Resources */,
-				64E4690229BFEF7400874300 /* erbaluce-bottle.jpg in Resources */,
+				648D3A1029CBED9300767DFE /* cortese-grapes.jpg in Resources */,
 				647805CB29BEF69500018916 /* pinot-noir-bottle.png in Resources */,
+				648D3A1429CBED9300767DFE /* cabernet-bottle.png in Resources */,
 				64CD64A929C1A4F300C06DDC /* barrel-cover.png in Resources */,
+				648D3A0029CBED5D00767DFE /* zinfandel-grapes.jpg in Resources */,
 				6423BDA129C2A9B8003F044D /* visa.png in Resources */,
-				64E468FB29BFEF7400874300 /* blanc-bottle.jpg in Resources */,
+				648D39FC29CBED5D00767DFE /* negroamaro-grapes.jpg in Resources */,
 				647EF5B029BC1D6D002A9897 /* Assets.xcassets in Resources */,
+				648D3A1329CBED9300767DFE /* cabernet-grapes.jpg in Resources */,
 				64CD649E29C18E4500C06DDC /* vineyard-cover.jpeg in Resources */,
 				64E468FE29BFEF7400874300 /* pp-placeholder.jpg in Resources */,
 				64E4690129BFEF7400874300 /* erbaluce-grapes.jpg in Resources */,
+				648D3A0D29CBED9300767DFE /* dolcetto-bottle.png in Resources */,
+				648D39FE29CBED5D00767DFE /* syrah-grapes.jpg in Resources */,
+				648D3A1C29CBEDBF00767DFE /* barbera-bottle.png in Resources */,
 				64E468FF29BFEF7400874300 /* barbera-grapes.jpg in Resources */,
+				648D39F729CBED5D00767DFE /* nebbiolo-grapes.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
