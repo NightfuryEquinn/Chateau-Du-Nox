@@ -24,6 +24,8 @@ struct LoginView: View {
     
     @State var isAuthenticated = false
     
+    @State private var showErrorAlert = false
+    
     @State private var inUsername = ""
     @State private var inPassword = ""
     
@@ -70,9 +72,11 @@ struct LoginView: View {
                     self.authenticate()
                     
                     createUserSession(username: inUsername, password: inPassword)
+                    
+                    isLogin = true
+                } else {
+                    showErrorAlert = true
                 }
-                
-                isLogin = true
             }) {
                 Text("Login")
                     .font(.custom("Didot", size: 20))
@@ -91,6 +95,13 @@ struct LoginView: View {
                     EmptyView()
                 }
             )
+            .alert(isPresented: $showErrorAlert) {
+                Alert(
+                    title: Text("Invalid Username or Password"),
+                    message: Text("The username does not existing or password is incorrect. Please try again."),
+                    dismissButton: .default(Text("Okay"))
+                )
+            }
             
             VStack {
                 Button(action: {
