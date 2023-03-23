@@ -21,6 +21,7 @@ struct PaymentView: View {
     @State private var cardHolderName = ""
     
     @State private var showAddressView = false
+    @State private var showErrorAlert = false
     
     // Binding Variables
     @Binding var showPaymentView: Bool
@@ -123,11 +124,9 @@ struct PaymentView: View {
                     
                     Button(action: {
                         if isCardNumberValid && isCVVValid && isExpirationDateValid {
-                            print("Proceed")
-                            
                             self.showAddressView = true
                         } else {
-                            print("Empty or error fields")
+                            showErrorAlert = true
                         }
                     }) {
                         Text("Proceed")
@@ -141,9 +140,15 @@ struct PaymentView: View {
                     }
                     .padding(.horizontal, 120)
                     .padding(.bottom, 40)
-                    .disabled(!isCardNumberValid || !isCVVValid || !isExpirationDateValid)
                     .sheet(isPresented: $showAddressView) {
                         AddressView(showAddressView: $showAddressView, showPaymentView: $showPaymentView, historyItems: $historyItems)
+                    }
+                    .alert(isPresented: $showErrorAlert) {
+                        Alert(
+                            title: Text("Invalid fields or empty fields."),
+                            message: Text("Please ensure that your card number, CVV, expiration date and card holder name are entered correctly."),
+                            dismissButton: .default(Text("Okay"))
+                        )
                     }
                 }
             }

@@ -5,7 +5,6 @@
 //  Created by YIP ZI XIAN on 21/03/2023.
 //
 
-import Foundation
 import CoreData
 
 func addWineToOrder(wineOrders: [HistoryItemStruct]) {
@@ -31,8 +30,6 @@ func addWineToOrder(wineOrders: [HistoryItemStruct]) {
             order.deliveredDate = wineOrder.deliveredDate
             
             try container.viewContext.save()
-            
-            print("Purchase")
         }
     } catch {
         print("Error purchasing: \(error.localizedDescription)")

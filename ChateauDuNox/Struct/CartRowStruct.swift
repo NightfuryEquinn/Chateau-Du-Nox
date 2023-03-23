@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CartRowStruct: View {
+    // State Variables
+    @State private var showRemoveAlert = false
+    
+    // Binding Variables
     @Binding var cartItem: CartItemStruct
     
     var body: some View {
@@ -48,9 +52,7 @@ struct CartRowStruct: View {
                     .padding(.trailing, 10.0)
                     
                     Button(action: {
-                        print("Remove")
-                        
-                        deleteWineFromCart(wine: cartItem.wine)
+                        showRemoveAlert = true
                     }) {
                         HStack {
                             Spacer()
@@ -66,6 +68,18 @@ struct CartRowStruct: View {
                     }
                     .padding(.vertical, 20.0)
                     .padding(.leading, 40.0)
+                    .alert(isPresented: $showRemoveAlert) {
+                        Alert(
+                            title: Text("Remove \(cartItem.wine)?"),
+                            message: Text("You can add it back from the main menu if you change your mind."),
+                            primaryButton: .destructive(
+                                Text("Yes"),
+                                action: {
+                                    deleteWineFromCart(wine: cartItem.wine)
+                                }),
+                            secondaryButton: .cancel()
+                        )
+                    }
                 }
             }
         }

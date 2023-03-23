@@ -5,7 +5,6 @@
 //  Created by YIP ZI XIAN on 18/03/2023.
 //
 
-import Foundation
 import SwiftUI
 
 struct HistoryRowStruct: View {

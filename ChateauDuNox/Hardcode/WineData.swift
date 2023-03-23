@@ -5,8 +5,6 @@
 //  Created by YIP ZI XIAN on 13/03/2023.
 //
 
-import Foundation
-
 struct WineData {
     static let wineData: [Wine] = [
         Wine(
@@ -65,10 +63,10 @@ struct WineData {
         ),
         Wine(
           name: "Cortese",
-          price: 9.2,
+          price: 436,
           phrase: "Cortese is a white grape that produces crisp and light-bodied wines with a delicate citrus aroma.",
           content: "Cortese is an Italian white grape variety grown mainly in the Piedmont region, Cortese produces wines that are light-bodied with a delicate citrus aroma. The wine is often crisp and refreshing, making it a popular choice for warm weather.",
-          rating: 436,
+          rating: 9.2,
           bottleImage: "cortese-bottle",
           coverImage: "cortese-grapes"
         ),

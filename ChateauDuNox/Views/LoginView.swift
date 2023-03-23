@@ -66,10 +66,6 @@ struct LoginView: View {
             .padding(.bottom, 50)
             
             Button(action: {
-                print("Login")
-                
-                print(userAuthentication(username: inUsername, password: inPassword))
-                
                 if(userAuthentication(username: inUsername, password: inPassword)) {
                     self.authenticate()
                     

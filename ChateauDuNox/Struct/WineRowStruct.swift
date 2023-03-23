@@ -45,8 +45,6 @@ struct WineRowStruct: View {
                 
                 HStack {
                     Button(action: {
-                        print("More")
-                        
                         self.showWineDetailsView = true
                     }) {
                         Text("More")

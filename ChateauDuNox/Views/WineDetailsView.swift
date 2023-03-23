@@ -33,9 +33,9 @@ struct WineDetailsView: View {
                     .foregroundColor(AppColour.cBlack)
                     .padding(.horizontal, 35)
                     .padding(.bottom, 20)
+                    .multilineTextAlignment(.center)
             
-            
-            ScrollView {
+                ScrollView {
                     Image(wine.bottleImage)
                         .resizable()
                         .frame(width: 125.0, height: 375.0)
@@ -109,7 +109,7 @@ struct WineDetailsView: View {
                     
                     if isLogin {
                         Button(action: {
-                            print("Add to Cart")
+                            showAddToCartAlert = true
                             
                             addWineToCart(
                                 customer: userSessionName ?? "",

@@ -5,8 +5,8 @@
 //  Created by YIP ZI XIAN on 18/03/2023.
 //
 
-import CoreLocation
 import SwiftUI
+import CoreLocation
 
 class LocationManager: ObservableObject {
     let userLocationManager = CLLocationManager()

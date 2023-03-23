@@ -6,7 +6,6 @@
 //
 
 import CoreData
-import SwiftUI
 
 func createUserSession(username: String, password: String) {
     // Get a Reference to the Core Data persistent container
