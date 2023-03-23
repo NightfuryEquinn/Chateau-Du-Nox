@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WineDetailsView: View {
     // State Variables
-    @State var showAddToCartView = false
+    @State private var showAddToCartAlert = false
     
     // Binding Variables
     @Binding var isLogin: Bool
@@ -111,8 +111,6 @@ struct WineDetailsView: View {
                         Button(action: {
                             print("Add to Cart")
                             
-                            self.showAddToCartView = true
-                            
                             addWineToCart(
                                 customer: userSessionName ?? "",
                                 wine: wine.name,
@@ -136,6 +134,13 @@ struct WineDetailsView: View {
                         .padding(.vertical, 40)
                         .padding(.leading, 200)
                         .padding(.trailing, 35)
+                        .alert(isPresented: $showAddToCartAlert) {
+                            Alert(
+                                title: Text("\(wine.name) Added!"),
+                                message: Text("You can check your cart to set the amount you want to purchase."),
+                                dismissButton: .default(Text("Okay"))
+                            )
+                        }
                     }
                 }
             }

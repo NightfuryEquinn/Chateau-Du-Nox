@@ -5,7 +5,7 @@
 //  Created by YIP ZI XIAN on 18/03/2023.
 //
 
-import MapKit
+import CoreLocation
 import SwiftUI
 
 class LocationManager: ObservableObject {

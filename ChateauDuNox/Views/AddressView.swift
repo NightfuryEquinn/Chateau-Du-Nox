@@ -14,6 +14,7 @@ struct AddressView: View {
     // State Variables
     @State private var address = ""
     @State private var coordinate = CLLocationCoordinate2D()
+    @State private var showConfirmAlert = false
     
     // Binding Variables
     @Binding var showAddressView: Bool
@@ -36,22 +37,7 @@ struct AddressView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 Button(action: {
-                    print("Confirm Address")
-                    
-                    updateCoordinate()
-                    
-                    showAddressView = false
-                    showPaymentView = false
-                    
-                    for index in historyItems.indices {
-                        historyItems[index].address = address
-                    }
-                    
-                    addWineToOrder(wineOrders: historyItems)
-                    
-                    for historyItem in historyItems {
-                        deleteWineFromCart(wine: historyItem.wine)
-                    }
+                    showConfirmAlert = true
                 }) {
                     Text("Confirm Address")
                         .font(.custom("Didot", size: 20))
@@ -64,6 +50,32 @@ struct AddressView: View {
                 }
                 .padding(.horizontal, 60)
                 .padding(.vertical, 20)
+                .alert(isPresented: $showConfirmAlert) {
+                    Alert(
+                        title: Text("Confirm Address?"),
+                        message: Text("Your order will be delivered to \(address)."),
+                        primaryButton: .destructive(
+                            Text("Yes"),
+                            action: {
+                                updateCoordinate()
+                                
+                                showAddressView = false
+                                showPaymentView = false
+                                
+                                for index in historyItems.indices {
+                                    historyItems[index].address = address
+                                }
+                                
+                                addWineToOrder(wineOrders: historyItems)
+                                
+                                for historyItem in historyItems {
+                                    deleteWineFromCart(wine: historyItem.wine)
+                                }
+                            }
+                        ),
+                        secondaryButton: .cancel()
+                    )
+                }
                 
                 AddressMap(address: $address, coordinate: coordinate)
                     .frame(maxWidth: .infinity)

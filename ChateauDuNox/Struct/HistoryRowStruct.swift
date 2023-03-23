@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct HistoryRowStruct: View {
+    // State Variables
+    @State private var showReceivedAlert = false
+    
     // Binding Variables
     @Binding var historyItem: HistoryItemStruct
     
@@ -76,9 +79,7 @@ struct HistoryRowStruct: View {
                     .foregroundColor(AppColour.cYellow)
             } else {
                 Button(action: {
-                    print("Received")
-                    
-                    updateWineOrder(wine: historyItem.wine, orderedDate: historyItem.orderedDate)
+                    showReceivedAlert = true
                 }) {
                     Text("Received?")
                         .font(.custom("Avenir Next", size: 16))
@@ -91,6 +92,19 @@ struct HistoryRowStruct: View {
                 }
                 .padding(.vertical, 20.0)
                 .padding(.trailing, 70.0)
+                .alert(isPresented: $showReceivedAlert) {
+                    Alert(
+                        title: Text("Confirm Received?"),
+                        message: Text("This action cannot be undone."),
+                        primaryButton: .destructive(
+                            Text("Yes"),
+                            action: {
+                                updateWineOrder(wine: historyItem.wine, orderedDate: historyItem.orderedDate)
+                            }
+                        ),
+                        secondaryButton: .cancel()
+                    )
+                }
             }
         }
         .padding(.horizontal, 35)

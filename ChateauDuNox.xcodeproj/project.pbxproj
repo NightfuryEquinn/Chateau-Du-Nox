@@ -187,17 +187,17 @@
 		64652D4629BEBB0100D576C7 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */,
+				64681B4229C81B0B00BE7944 /* AddWineToCart.swift */,
+				64117CAC29C9345E00A43F66 /* AddWineToOrder.swift */,
+				64681B4629C835C300BE7944 /* DeleteWineFromCart.swift */,
+				64681B4429C82EE400BE7944 /* FetchWineFromCart.swift */,
+				64117CAE29C9555900A43F66 /* FetchWineFromOrder.swift */,
 				64652D4429BEBAF900D576C7 /* ForgotAuthentication.swift */,
 				64CD64A429C193C600C06DDC /* FormatChecker.swift */,
-				64681B3E29C7E3B100BE7944 /* UserSession.swift */,
 				64681B4029C8093500BE7944 /* UpdateUserInfo.swift */,
-				64681B4229C81B0B00BE7944 /* AddWineToCart.swift */,
-				64681B4429C82EE400BE7944 /* FetchWineFromCart.swift */,
-				64681B4629C835C300BE7944 /* DeleteWineFromCart.swift */,
-				64117CAC29C9345E00A43F66 /* AddWineToOrder.swift */,
-				64117CAE29C9555900A43F66 /* FetchWineFromOrder.swift */,
 				64117CB029C96E1D00A43F66 /* UpdateWineOrder.swift */,
+				64C9AB9F29BC6C6000025C95 /* UserAuthentication.swift */,
+				64681B3E29C7E3B100BE7944 /* UserSession.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -257,17 +257,17 @@
 		647EF5CA29BC2250002A9897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				647EF5C629BC2224002A9897 /* LoginView.swift */,
-				647EF5C829BC2247002A9897 /* SignupView.swift */,
+				6499706B29C585D50091E541 /* AddressView.swift */,
+				64A80A1329C04E2B0055E91B /* CrateView.swift */,
 				64F634E729BC43AE006E03D8 /* ForgotView.swift */,
 				647805CC29BF0EA800018916 /* GuestMenuView.swift */,
-				64A80A1129C04E190055E91B /* ProfileView.swift */,
-				64CD649929C18D7200C06DDC /* UpdateProfileView.swift */,
-				647805CE29BF0F8000018916 /* MainMenuView.swift */,
 				64A80A1529C04E420055E91B /* HistoryView.swift */,
-				64A80A1329C04E2B0055E91B /* CrateView.swift */,
+				647EF5C629BC2224002A9897 /* LoginView.swift */,
+				647805CE29BF0F8000018916 /* MainMenuView.swift */,
 				6423BD9729C2A1CB003F044D /* PaymentView.swift */,
-				6499706B29C585D50091E541 /* AddressView.swift */,
+				64A80A1129C04E190055E91B /* ProfileView.swift */,
+				647EF5C829BC2247002A9897 /* SignupView.swift */,
+				64CD649929C18D7200C06DDC /* UpdateProfileView.swift */,
 				64E4690529BFF68600874300 /* WineDetailsView.swift */,
 			);
 			path = Views;
@@ -323,8 +323,8 @@
 		6499707129C58BEB0091E541 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				6499707229C58E950091E541 /* LocationManager.swift */,
 				6499706F29C58BE60091E541 /* AddressMap.swift */,
+				6499707229C58E950091E541 /* LocationManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -332,12 +332,12 @@
 		64CD649629C1896B00C06DDC /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				64CD649429C1896700C06DDC /* SearchBarStruct.swift */,
-				64CD649729C18ABB00C06DDC /* WineRowStruct.swift */,
-				64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */,
 				6423BD9529C292B3003F044D /* CartItemStruct.swift */,
+				64CD64AA29C1B6EB00C06DDC /* CartRowStruct.swift */,
 				6499706529C5696E0091E541 /* HistoryItemStruct.swift */,
 				6499706729C56A590091E541 /* HistoryRowStruct.swift */,
+				64CD649429C1896700C06DDC /* SearchBarStruct.swift */,
+				64CD649729C18ABB00C06DDC /* WineRowStruct.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
